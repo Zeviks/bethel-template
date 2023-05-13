@@ -32,3 +32,17 @@
     @apply opacity-100;
   }
 }
+
+.anim-underline-fx {
+  background-image: linear-gradient(to right, #99DBFF 50%, #E5F6FF 50%);
+  background-size: 200% 3px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  transition: background-position 200ms ease-in-out;
+}
+
+.anim-underline-fx:hover {
+  background-position: 0% 100%;
+  color: #99DBFF;
+  transition: all 300ms ease-in-out;
+}
