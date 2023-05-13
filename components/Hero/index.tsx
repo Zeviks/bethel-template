@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 h-[100vh] w-full overflow-hidden bg-bethelHero bg-cover bg-center pt-[100px] pb-12 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+        className="relative z-10 h-[100vh] w-full overflow-hidden pt-[100px] pb-12 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
       >
         <div className="container flex h-full flex-col items-center">
           <div className="-mx-4 mt-8 flex flex-wrap">
@@ -30,23 +30,41 @@ const Hero = () => {
                   <br /> on Sundays & Wednesdays.
                 </p>
 
-                <div className="px-auto flex items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <div className="px-auto flex flex-row items-center justify-center space-y-0 space-x-4">
                   <Link
-                    href="https://nextjstemplates.com/templates/startup"
-                    className="rounded-md bg-primary py-3 px-6 text-base font-semibold text-dark duration-300 ease-in-out hover:bg-primary/80"
+                    href="/"
+                    className="rounded bg-primary py-2 px-3 text-sm font-medium text-dark duration-300 ease-in-out hover:bg-primary/80 lg:text-base"
                   >
                     Join in Person
                   </Link>
                   <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="anim-underline-fx py-3 px-6 text-base font-semibold text-lightPrimary duration-300 ease-in-out"
+                    href="/"
+                    className="anim-underline-fx py-2 text-base font-medium text-lightPrimary duration-300 ease-in-out lg:text-sm"
                   >
-                    Watch Online
+                    <span className="flex items-center justify-between font-medium">
+                      Watch Online
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        className="ml-2 h-6 w-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                        />
+                      </svg>
+                    </span>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className=" mt-[5px] hidden h-full sm:block md:mt-[30px] xl:mt-[100px]">
           <HeroIcon />
         </div>
       </section>

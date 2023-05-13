@@ -43,6 +43,5 @@
 
 .anim-underline-fx:hover {
   background-position: 0% 100%;
-  color: #99DBFF;
   transition: all 300ms ease-in-out;
 }

@@ -3,14 +3,14 @@ import React from "react";
 const HeroIcon = () => {
   return (
     <div className="flex flex-col items-center">
-      <span className="mb-2 text-white">Scroll Down</span>
+      <span className="mb-2 text-xs text-white/60">Scroll Down</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="h-10 w-10 animate-pulse text-white"
+        className="h-7 w-7 animate-pulse text-white"
       >
         <path
           strokeLinecap="round"
