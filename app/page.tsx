@@ -8,7 +8,7 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import YearlyTheme from "@/components/YearlyTheme";
 import { Inter } from "@next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <ScrollUp />
       <Features />
-      <Video />
+      <YearlyTheme />
       <Brands />
       <AboutSectionOne />
       <AboutSectionTwo />
