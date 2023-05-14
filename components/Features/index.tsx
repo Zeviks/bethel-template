@@ -1,10 +1,11 @@
 import SectionTitle from "../Common/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
-
+import SectionHeading from "@/components/SectionHeading";
 const Features = () => {
   return (
     <>
+      <SectionHeading heading="Our Church" />
       <section
         id="features"
         className="lg:py-25 bg-primary/[.03] py-16 md:py-20"
