@@ -6,7 +6,7 @@ import { useState } from "react";
 const YearlyTheme = () => {
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="h-[450px] w-full bg-primary">
+      <div className=" h-fit w-full bg-primary">
         <Image src="/images/gradient-blue.png" alt="section gradient" fill />
         <div className="flex justify-between">
           <div className="container z-[999] flex w-[658px] flex-col justify-center">
