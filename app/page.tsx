@@ -22,7 +22,9 @@ export default function Home() {
       <Features />
       <YearlyTheme />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      <div className="mt-2 bg-missionBg bg-cover">
+        <AboutSectionTwo />
+      </div>
       <Testimonials />
       <Pricing />
       <Blog />

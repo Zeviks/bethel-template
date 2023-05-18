@@ -1,9 +1,8 @@
-import Image from "next/image";
 import SectionHeading from "../SectionHeading";
 
 const AboutSectionOne = () => {
   return (
-    <section id="about" className="">
+    <section id="about" className="my-20">
       <SectionHeading heading="Our Mission" />
       <div className="container mt-10 flex w-full items-center justify-between">
         <h2 className=" text-4xl font-semibold text-dark">

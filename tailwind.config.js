@@ -44,6 +44,7 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         bethelHero: "url('/images/hero/hero.png')",
+        missionBg: "url('/images/TEST/mission-bg.png')",
       }),
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
