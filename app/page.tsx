@@ -6,7 +6,7 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
+import Minisitries from "@/components/Ministries";
 import YearlyTheme from "@/components/YearlyTheme";
 import { Inter } from "@next/font/google";
 
@@ -25,7 +25,7 @@ export default function Home() {
       <div className="mt-2 bg-missionBg bg-cover">
         <AboutSectionTwo />
       </div>
-      <Testimonials />
+      <Minisitries />
       <Pricing />
       <Blog />
       <Contact />
