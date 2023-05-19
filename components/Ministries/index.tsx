@@ -24,12 +24,22 @@ const Ministries = () => {
         <div className="row-span-1">
           <MinistryCard />
         </div>
-        <div className="row-span-2 bg-black"></div>
-        <div className="row-span-1 bg-black"></div>
+        <div className="row-span-2 bg-black">
+          <MinistryCard />
+        </div>
+        <div className="row-span-1 bg-black">
+          <MinistryCard />
+        </div>
         {/* Bottom Row */}
-        <div className="row-span-2 bg-primary"></div>
-        <div className="row-span-2 bg-primary"></div>
-        <div className="row-span-1 bg-primary"></div>
+        <div className="row-span-2 bg-primary">
+          <MinistryCard />
+        </div>
+        <div className="row-span-2 bg-primary">
+          <MinistryCard />
+        </div>
+        <div className="row-span-1 bg-primary">
+          <MinistryCard />
+        </div>
       </div>
     </section>
   );
