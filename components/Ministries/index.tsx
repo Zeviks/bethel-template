@@ -19,7 +19,7 @@ const Ministries = () => {
         </p>
       </div>
 
-      <div className="container grid grid-cols-2 grid-rows-[_repeat(3,_250px)] gap-4 border border-black md:grid-cols-3">
+      <div className="container grid grid-cols-2 grid-rows-[_repeat(3,_250px)] gap-4 md:grid-cols-3">
         {/* Top Row */}
         <div className="row-span-1">
           <MinistryCard />
