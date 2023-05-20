@@ -25,10 +25,8 @@ export default function Home() {
       <div className="mt-2 bg-missionBg bg-cover">
         <AboutSectionTwo />
       </div>
-
       <Minisitries />
       <Leaders />
-      <Blog />
       <Contact />
     </>
   );

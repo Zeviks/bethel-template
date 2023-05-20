@@ -3,79 +3,90 @@ import NewsLatterBox from "./NewsLatterBox";
 const Contact = () => {
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+      <div className="container ">
+        <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="w-full px-4 xl:w-[75%]">
             <div
-              className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className="wow fadeInUp mb-12 w-full rounded-md bg-primary/[70%] py-11 px-8 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
               "
             >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
+              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-6xl">
+                Have any questions?
               </h2>
-              <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
+              <p className="mb-12 text-2xl font-medium">
+                <span className="text-dark/[85%]"> Please react out. </span>
+                <span className="border-b-2 border-dark/[75%] text-dark/[85%]">
+                  Or give us a visit
+                </span>
+                .
               </p>
-              <form>
-                <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter your name"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      />
-                    </div>
+
+              <div className="flex justify-between">
+                <div className="flex flex-col justify-between gap-5">
+                  <div className="flex items-center">
+                    <svg
+                      aria-hidden="true"
+                      className="mr-2 h-10 w-10 fill-current"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <p>(956) 787-1737</p>
                   </div>
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Email
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      />
-                    </div>
+                  <div className="flex items-center">
+                    <svg
+                      aria-hidden="true"
+                      className="mr-2 h-10 w-10 fill-current"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <p>
+                      <span className="font-semibold">Office hours:</span>{" "}
+                      <br />
+                      Monday - Fridays from 9am to 3:30pm
+                      <br /> Weekends - Closed
+                    </p>
                   </div>
-                  <div className="w-full px-4">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Message
-                      </label>
-                      <textarea
-                        name="message"
-                        rows={5}
-                        placeholder="Enter your Message"
-                        className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      Submit Ticket
-                    </button>
+                  <div className="flex items-center">
+                    <svg
+                      aria-hidden="true"
+                      className="mr-2 h-10 w-10 fill-current"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    EMAIL
                   </div>
                 </div>
-              </form>
+                <div>
+                  <p>Our Service Times</p>
+                  <div className="bg-dar flex h-[150px] w-[400px] flex-col items-center justify-center rounded-sm bg-dark text-2xl text-white">
+                    <p>Wednesdays at 7pm</p>
+                    <p>Sundays from 10am & 5pm</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
           </div>
         </div>
       </div>

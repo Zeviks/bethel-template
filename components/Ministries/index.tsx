@@ -6,7 +6,7 @@ import MinistryCard from "./MinistryCard";
 
 const Ministries = () => {
   return (
-    <section className="bg-lightPrimary py-10">
+    <section className="bg-primary/[50%] py-10">
       <SectionHeading heading="Our Ministries" />
       <div className="container my-20 flex w-full items-center justify-between">
         <h2 className="w-[30ch] text-4xl font-semibold text-dark">
