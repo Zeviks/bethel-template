@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import NavigationBar from "@/components/NavigationBar/index";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
+import { ThemeProvider } from "@material-tailwind/react";
 
 export default function RootLayout({
   children,
@@ -20,10 +21,12 @@ export default function RootLayout({
       <head />
 
       <body>
-        <NavigationBar />
-        {children}
-        <Footer />
-        <ScrollToTop />
+        <ThemeProvider>
+          <NavigationBar />
+          {children}
+          <Footer />
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   );

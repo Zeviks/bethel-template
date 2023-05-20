@@ -18,7 +18,7 @@ const YearlyTheme = () => {
           </div>
 
           <div className="relative bottom-12 z-[999] flex h-[450px] w-[770px] flex-col justify-between rounded bg-dark p-12">
-            <span className="bg-red-300 z-[999] mt-2 w-fit rounded-full bg-primary py-2.5 px-9 text-dark">
+            <span className="z-[999] mt-2 w-fit rounded-full bg-primary py-2.5 px-9 text-dark">
               2023
             </span>
             <p className="pl-6 text-4xl font-bold text-white">

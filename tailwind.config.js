@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -45,6 +47,7 @@ module.exports = {
       backgroundImage: (theme) => ({
         bethelHero: "url('/images/hero/hero.png')",
         missionBg: "url('/images/TEST/mission-bg.png')",
+        blueShadow: "url('/images/gradient-blue.png')",
       }),
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
@@ -54,4 +57,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+});

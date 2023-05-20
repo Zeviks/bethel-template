@@ -5,7 +5,9 @@ import SectionHeading from "@/components/SectionHeading";
 const Features = () => {
   return (
     <>
-      <SectionHeading heading="Our Church" />
+      <div className="pt-10">
+        <SectionHeading heading="Our Church" />
+      </div>
       <section
         id="features"
         className="lg:py-25 bg-primary/[.03] py-16 md:py-20"
