@@ -58,14 +58,14 @@ const NavigationBar = () => {
               >
                 <Image
                   src="/images/logo/bethel.svg"
-                  alt="logo"
+                  alt="Navigation Logo"
                   width={50}
                   height={50}
                 />
               </Link>
             </div>
 
-            <div className="jus flex w-full items-center justify-center px-4">
+            <div className="flex w-full items-center justify-center px-4">
               <div>
                 <button
                   onClick={navbarToggleHandler}
@@ -111,7 +111,7 @@ const NavigationBar = () => {
                           <>
                             <a
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+                              className="flex cursor-pointer items-center justify-between  text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -160,7 +160,7 @@ const NavigationBar = () => {
             <div className="flex items-center justify-end pr-16 md:pr-[-2] lg:pr-0">
               <Link
                 href="https://pushpay.com/g/bethelpharr"
-                className="ease-in-up hidden rounded-md bg-primary py-3 px-4 text-base font-medium text-dark transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:mr-4 md:block md:px-5 lg:px-6 xl:px-9"
+                className="ease-in-up hidden rounded-md bg-primary py-2 px-4 text-base font-medium text-dark transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:mr-4 md:block md:px-5 lg:px-6 xl:px-7"
               >
                 Give
               </Link>
