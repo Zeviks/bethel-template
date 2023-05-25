@@ -15,7 +15,7 @@ const Hero = () => {
                 className="wow fadeInUp mx-auto max-w-[800px] text-center xl:max-w-[900px]"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-10 font-['Bellefair'] text-5xl leading-tight text-white  sm:text-xl sm:leading-tight md:mt-2  md:text-8xl md:leading-tight xl:text-9xl">
+                <h1 className="mb-10 font-['Bellefair'] text-5xl leading-tight text-white sm:text-xl sm:leading-tight md:mt-2 md:text-8xl md:leading-tight xl:text-9xl">
                   SERVING GOD
                   <br />
                   <span>
@@ -30,16 +30,16 @@ const Hero = () => {
                   <br /> on Sundays & Wednesdays.
                 </p>
 
-                <div className="px-auto flex flex-row items-center justify-center space-y-0 space-x-4">
+                <div className="px-auto flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                   <Link
                     href="/"
-                    className="rounded bg-primary py-2 px-3 text-sm font-medium text-dark duration-300 ease-in-out hover:bg-primary/80 lg:text-base"
+                    className="rounded bg-primary py-2 px-3 text-sm font-medium text-dark duration-300 ease-in-out hover:bg-primary/80 sm:text-base"
                   >
                     Join in Person
                   </Link>
                   <Link
                     href="/"
-                    className="anim-underline-fx py-2 text-base font-medium text-lightPrimary duration-300 ease-in-out lg:text-sm"
+                    className="anim-underline-fx py-2 text-base font-medium text-lightPrimary duration-300 ease-in-out sm:text-sm"
                   >
                     <span className="flex items-center justify-between font-medium">
                       Watch Online
@@ -47,13 +47,13 @@ const Hero = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="ml-2 h-6 w-6"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                         />
                       </svg>
@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className=" mt-[5px] hidden h-full sm:block md:mt-[30px] xl:mt-[100px]">
+        <div className="md:mt-30 xl:mt-100 mt-5 hidden h-full sm:block">
           <HeroIcon />
         </div>
       </section>

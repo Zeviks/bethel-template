@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 const YearlyTheme = () => {
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className=" h-fit w-full bg-primary/[50%]">
-        <Image src="/images/gradient-blue.png" alt="section gradient" fill />
+      <div className=" bg-primary/[50% yearly-gradient h-fit w-full">
         <div className="flex justify-between">
           <div className="container z-[999] flex w-[658px] flex-col justify-center">
             <span className="mb-2 text-sm font-light">This Year's Theme</span>
@@ -31,7 +29,9 @@ const YearlyTheme = () => {
               ”
             </p>
             <span className="text-xl font-bold text-white">1 John 4:7-21</span>
-            <Image src="/images/shadow-15.png" alt="section gradient" fill />
+            {/* <div className="relative">
+              <Image src="/images/shadow-15.png" alt="section gradient" fill />
+            </div> */}
           </div>
         </div>
       </div>

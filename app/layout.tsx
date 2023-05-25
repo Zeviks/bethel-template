@@ -27,6 +27,7 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
+        <script src="../path/to/flowbite/dist/flowbite.min.js" async />
       </body>
     </html>
   );

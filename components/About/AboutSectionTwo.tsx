@@ -3,11 +3,19 @@ import Image from "next/image";
 const AboutSectionTwo = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
-      <div className="static flex items-center justify-evenly text-4xl font-semibold text-white">
-        <span className="border-b-2 border-primary">Love God.</span>
-        <span className="border-b-2 border-primary">Discover the Truth.</span>
-        <span className="border-b-2 border-primary">Show Compassion.</span>
-        <span className="border-b-2 border-primary">Learn Your Purpose.</span>
+      <div className="static flex flex-wrap items-center justify-evenly text-4xl font-semibold text-white">
+        <span className="mb-4 w-full border-b-2 border-primary sm:mx-4 sm:mb-0 sm:w-auto">
+          Love God.
+        </span>
+        <span className="mb-4 w-full border-b-2 border-primary sm:mx-4 sm:mb-0 sm:w-auto">
+          Discover the Truth.
+        </span>
+        <span className="mb-4 w-full border-b-2 border-primary sm:mx-4 sm:mb-0 sm:w-auto">
+          Show Compassion.
+        </span>
+        <span className="mb-4 w-full border-b-2 border-primary sm:mx-4 sm:mb-0 sm:w-auto">
+          Learn Your Purpose.
+        </span>
       </div>
       <div className="flex h-[90vh] w-full flex-col justify-evenly">
         <div className="container flex flex-col text-white">
