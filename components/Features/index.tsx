@@ -19,14 +19,14 @@ const Features = () => {
           />
           {/* Grid */}
           <div className="flex flex-col gap-5 pt-10 lg:flex-row">
-            <div className="flex h-auto items-end justify-center rounded bg-bethelHero bg-cover lg:h-[500px] lg:w-[400px] lg:px-8 xl:w-[700px] xl:px-12">
-              <div className="container mb-12 flex h-[80px] w-[400px] flex-col items-start justify-center rounded bg-dark">
-                <h2 className="lg:text-md text-center font-light text-white xl:text-lg">
+            <div className="flex h-[500px] items-end justify-center rounded bg-bethelHero bg-cover px-6 lg:w-[75%] lg:px-8 xl:w-[70%] xl:px-12">
+              <div className="container mb-12 flex h-[80px] w-full flex-col items-start justify-center rounded bg-dark">
+                <h2 className="lg:text-md text-center text-sm font-light text-white xl:text-lg">
                   We are located at:
                 </h2>
                 <Link
                   href="/"
-                  className="xl:text-md mt-2 font-semibold text-white lg:text-sm"
+                  className="mt-2 text-[12px] font-semibold text-white lg:text-sm xl:text-[16px]"
                 >
                   400 S. I Rd, S Veterans Blvd, Pharr, TX 78577
                 </Link>
@@ -34,12 +34,12 @@ const Features = () => {
             </div>
 
             {/* Right Square */}
-            <div className="flex h-auto w-full items-end justify-center rounded bg-bethelHero bg-cover px-12 lg:h-[500px]">
+            <div className="flex h-[500px] w-full items-end justify-center rounded bg-bethelHero bg-cover px-6 md:px-12">
               <div className="container mb-12 flex h-[80px] items-center justify-evenly rounded bg-dark py-5">
-                <h2 className="lg:text-md  text-center font-medium text-white xl:text-lg">
+                <h2 className="lg:text-md text-center text-sm font-medium text-lightPrimary xl:text-lg">
                   Our Service Times
                 </h2>
-                <p className="font-light text-white lg:text-sm xl:text-lg">
+                <p className="text-[12px] font-light text-lightPrimary lg:text-sm xl:text-lg">
                   <span className="font-semibold">Wednesdays</span> at{" "}
                   <span className="font-semibold">7pm</span> <br />
                   <span className="font-semibold">Sundays</span> at{" "}
@@ -48,7 +48,7 @@ const Features = () => {
                 </p>
               </div>
             </div>
-            {/* Bottom.... */}
+            {/* Contact Us BTN Component */}
           </div>
         </div>
       </section>

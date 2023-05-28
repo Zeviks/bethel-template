@@ -15,9 +15,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <div className="bg-bethelHero bg-cover bg-center">
-        <Hero />
-      </div>
+      <Hero />
+
       <ScrollUp />
       <Features />
       <YearlyTheme />

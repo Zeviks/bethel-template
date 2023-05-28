@@ -6,7 +6,11 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 h-[100vh] w-full overflow-hidden pt-[100px] pb-12 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+        className="relative z-10 h-screen w-full overflow-hidden bg-cover bg-center pt-[100px] pb-12 md:bg-fixed md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+        style={{
+          backgroundImage: 'url("/images/hero/hero.png")',
+          transform: "rotate(0deg)",
+        }}
       >
         <div className="container flex h-full flex-col items-center">
           <div className="-mx-4 mt-8 flex flex-wrap">
