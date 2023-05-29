@@ -77,7 +77,7 @@ export default function Leaders() {
   };
 
   return (
-    <section className="py-10">
+    <section className="pt-10">
       <SectionHeading heading="Our Leaders" />
 
       <div className="container my-20 flex flex-col items-center justify-between">
@@ -92,7 +92,7 @@ export default function Leaders() {
         <div className="container pt-20">
           <Slider {...settings}>
             {developers.map((developer, index) => (
-              <div key={index} className="h-[300px] w-[200px]  px-2 ">
+              <div key={index} className="h-[300px] w-[200px] px-2 ">
                 <img
                   src={developer.image}
                   alt={developer.name}
