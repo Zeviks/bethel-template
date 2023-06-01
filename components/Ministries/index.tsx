@@ -50,7 +50,9 @@ const Ministries = () => {
             Lorem ipsum dolor sit amet consectetur. Sapien montes turpis
             pellentesque quis mus. pellentesque a mus viverra sit.
           </p>
-          <Button variant="outlined">View All</Button>
+          <a href="/ministries">
+            <Button variant="outlined">View All</Button>
+          </a>
         </div>
       </div>
     </section>

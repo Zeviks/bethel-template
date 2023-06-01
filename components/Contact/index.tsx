@@ -74,7 +74,7 @@ const Contact = () => {
                     EMAIL
                   </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 lg:mt-0">
                   <p className="text-xl">Our Service Times</p>
                   <div className="flex h-[150px] w-full items-center justify-center rounded-sm bg-dark py-4 px-8 text-2xl text-white">
                     <div className="text-center">
