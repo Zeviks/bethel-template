@@ -35,11 +35,11 @@ const Features = () => {
 
             {/* Right Square */}
             <div className="flex h-[500px] w-full items-end justify-center rounded bg-bethelHero bg-cover px-6 md:px-12">
-              <div className="container mb-12 flex h-[80px] items-center justify-evenly rounded bg-dark py-5">
-                <h2 className="lg:text-md text-center text-sm font-medium text-lightPrimary xl:text-lg">
+              <div className="container mb-12 flex h-16 items-center justify-evenly rounded bg-dark py-5 sm:h-20 md:h-24 lg:h-[80px]">
+                <h2 className="lg:text-md text-center text-sm font-medium text-lightPrimary sm:text-base md:text-lg xl:text-lg">
                   Our Service Times
                 </h2>
-                <p className="text-[12px] font-light text-lightPrimary lg:text-sm xl:text-lg">
+                <p className="text-xs font-light text-lightPrimary sm:text-sm md:text-base lg:text-sm xl:text-lg">
                   <span className="font-semibold">Wednesdays</span> at{" "}
                   <span className="font-semibold">7pm</span> <br />
                   <span className="font-semibold">Sundays</span> at{" "}

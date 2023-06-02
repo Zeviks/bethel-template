@@ -1,13 +1,13 @@
 const YearlyTheme = () => {
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10">
       <div className="yearly-gradient h-fit w-full bg-primary/[50%]">
         <div className="container flex flex-col gap-4 py-10 md:justify-between lg:flex-row lg:items-center lg:py-0">
           <div className="w-[100%] pb-2 md:text-left lg:w-[70%]">
             <span className="mb-2 text-sm font-light md:text-lg">
               This Year's Theme
             </span>
-            <h2 className="w-full text-3xl font-medium leading-tight md:w-[18ch] md:text-4xl">
+            <h2 className="w-full text-3xl font-medium leading-tight tracking-tight md:w-[18ch] md:text-4xl">
               Let us love one another as he has loved us.
             </h2>
           </div>
