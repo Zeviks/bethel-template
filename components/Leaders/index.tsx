@@ -9,36 +9,35 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Leaders() {
   const developers = [
     {
-      name: "John Doe",
-      jobTitle: "Frontend Developer",
+      name: "REV. RICK REYES",
+      jobTitle: "LEAD PASTOR",
       image:
         "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
     },
     {
-      name: "Jane Smith",
-      jobTitle: "Backend Developer",
+      name: "REV. RICK REYES",
+      jobTitle: "LEAD PASTOR",
       image:
         "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
     },
     {
-      name: "David Johnson",
-      jobTitle: "Full Stack Developer",
+      name: "REV. RICK REYES",
+      jobTitle: "LEAD PASTOR",
       image:
         "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
     },
     {
-      name: "David Johnson",
-      jobTitle: "Full Stack Developer",
+      name: "REV. RICK REYES",
+      jobTitle: "LEAD PASTOR",
       image:
         "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
     },
     {
-      name: "David Johnson",
-      jobTitle: "Full Stack Developer",
+      name: "REV. RICK REYES",
+      jobTitle: "LEAD PASTOR",
       image:
         "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
     },
-    // Add more developer objects as needed
   ];
 
   let settings = {
@@ -99,10 +98,8 @@ export default function Leaders() {
                   className="h-full w-full object-cover shadow-sm shadow-blue-gray-900/50"
                 />
                 <div className="pt-3">
-                  <h3 className="font-medium">{developer.name}</h3>
-                  <p className="font-light text-primary">
-                    {developer.jobTitle}
-                  </p>
+                  <h3 className="font-semibold">{developer.name}</h3>
+                  <p className="font-base text-primary">{developer.jobTitle}</p>
                 </div>
               </div>
             ))}

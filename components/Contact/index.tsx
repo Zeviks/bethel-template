@@ -34,7 +34,11 @@ const Contact = () => {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    <p>(956) 787-1737</p>
+                    <p>
+                      <span className="font-semibold">Office phone:</span>{" "}
+                      <br />
+                      (956) 787-1737
+                    </p>
                   </div>
                   <div className="flex items-center">
                     <svg
@@ -71,7 +75,10 @@ const Contact = () => {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    EMAIL
+                    <p>
+                      <span className="font-semibold">Email:</span> <br />
+                      bethelpharr.church@gmail.com
+                    </p>
                   </div>
                 </div>
                 <div className="mt-6 lg:mt-0">
