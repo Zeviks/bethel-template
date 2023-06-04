@@ -8,14 +8,14 @@ const Ministries = () => {
   return (
     <section className="yearly-gradient py-10">
       <SectionHeading heading="Our Ministries" />
-      <div className="container my-20 flex w-full items-center justify-between">
-        <h2 className="w-[30ch] text-4xl font-semibold text-dark">
+      <div className="container my-20 flex flex-col items-center justify-between lg:flex-row">
+        <h2 className="mb-4 w-full text-4xl font-semibold text-dark md:w-[80%] lg:mb-0 lg:mr-8 lg:w-[30ch]">
           God's house always has room for everyone.{" "}
           <span className="border-b-4 border-primary">
             Discover where you fit in best.
           </span>
         </h2>
-        <p className="text-xl font-light">
+        <p className="text-xl font-light lg:text-lg">
           Every believer was created to belong to a community. <br />
           It was never God’s heart for us to do this life alone.
         </p>
