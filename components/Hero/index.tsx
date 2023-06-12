@@ -12,14 +12,14 @@ const Hero = () => {
           transform: "rotate(0deg)",
         }}
       >
-        <div className="container flex h-full flex-col justify-center">
+        <div className="flex h-full flex-col justify-center">
           <div className="-mx-4 mt-8 flex flex-wrap">
             <div className="w-full px-4">
               <div
                 className="wow fadeInUp mx-auto max-w-[800px] text-center xl:max-w-[900px]"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-10 font-['Bellefair'] text-5xl leading-tight text-white sm:text-7xl sm:leading-tight md:mt-2 md:text-8xl md:leading-tight lg:text-[110px] xl:text-9xl ">
+                <h1 className="mb-10 font-['Bellefair'] text-6xl leading-tight text-white sm:text-7xl sm:leading-tight md:mt-2 md:text-8xl md:leading-tight lg:text-[110px] xl:text-9xl ">
                   SERVING GOD
                   <br />
                   <span>
@@ -29,7 +29,7 @@ const Hero = () => {
                     </span>
                   </span>
                 </h1>
-                <p className="text-md mb-12 font-light text-white sm:text-lg md:text-2xl">
+                <p className="xs:text-md mb-12 text-sm font-light text-white sm:text-lg md:text-2xl">
                   Experience God’s presence with us at Bethel in Pharr,
                   <br /> on Sundays & Wednesdays.
                 </p>
