@@ -1,7 +1,9 @@
+"use client";
 import SectionTitle from "../Common/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
+import ContactCTA from "../ContactCTA";
 const Features = () => {
   return (
     <>
@@ -50,6 +52,7 @@ const Features = () => {
             </div>
             {/* Contact Us BTN Component */}
           </div>
+          <ContactCTA />
         </div>
       </section>
     </>

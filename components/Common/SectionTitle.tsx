@@ -13,7 +13,7 @@ const SectionTitle = ({
 }) => {
   return (
     <>
-      <h2 className="mb-4 text-3xl font-bold leading-tight text-black sm:text-4xl md:text-5xl">
+      <h2 className="mb-4 text-2xl font-bold leading-tight text-dark sm:text-3xl md:text-4xl">
         {title}
       </h2>
       <p className="text-base leading-relaxed text-body-color md:text-lg">
