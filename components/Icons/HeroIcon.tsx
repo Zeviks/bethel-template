@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroIcon = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="mt-[120px] flex flex-col items-center">
       <span className="mb-2 text-xs text-white/60">Scroll Down</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

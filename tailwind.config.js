@@ -50,6 +50,8 @@ module.exports = withMT({
         missionBg: "url('/images/TEST/mission-bg.png')",
         blueShadow: "url('/images/gradient-blue.png')",
         testIMG: "url('/images/testIMG.jpg')",
+        rightIMG: "url('/images/church/cross.png')",
+        leftIMG: "url('/images/church/visit.jpg')",
       }),
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
