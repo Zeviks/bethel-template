@@ -1,47 +1,42 @@
 "use client";
-import SectionHeading from "../SectionHeading";
 import { Button } from "@material-tailwind/react";
 import MinistryCard from "./MinistryCard";
 
 const Ministries = () => {
   return (
-    <section className="yearly-gradient py-10">
-      <SectionHeading heading="Our Ministries" />
-      <div className="container my-20 flex w-full items-center justify-between">
-        <h2 className="w-[30ch] text-4xl font-semibold text-dark">
-          God's house always has room for everyone.{" "}
-          <span className="border-b-4 border-primary">
-            Discover where you fit in best.
-          </span>
+    <section className="yearly-gradient ">
+      <div className="container flex w-full flex-col items-center justify-between py-10 sm:flex-row">
+        <h2 className="w-full text-center text-3xl font-semibold text-dark sm:w-[30ch] sm:text-left sm:text-4xl">
+          Our Ministries
         </h2>
-        <p className="text-xl font-light">
-          Every believer was created to belong to a community. <br />
-          It was never God’s heart for us to do this life alone.
+        <p className="mt-4 text-center text-base font-light sm:mt-0 sm:text-left sm:text-xl">
+          God's house always has room for everyone. <br />
+          <span className="font-semibold">Discover where you fit in best.</span>
         </p>
       </div>
 
-      <div className="container">
+      <div className="container pb-5">
         <div className="grid grid-cols-2 grid-rows-[_repeat(3,_250px)] gap-4 rounded-lg md:grid-cols-3">
           {/* Top Row */}
           <div className="row-span-1">
             <MinistryCard
               title="Women Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/hero/hero.png"
+              imageURL="/images/pre-final/womens.jpg"
             />
           </div>
           <div className="row-span-2 ">
             <MinistryCard
               title="Kids Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/hero/hero.png"
+              imageURL="/images/pre-final/kids.jpg"
             />
           </div>
-          <div className="row-span-1 ">
+          <div className="row-span-1">
             <MinistryCard
               title="Youth Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/hero/hero.png"
+              imageURL="/images/pre-final/youth.jpg"
             />
           </div>
           {/* Bottom Row */}
@@ -49,21 +44,21 @@ const Ministries = () => {
             <MinistryCard
               title="Golden Agers"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/hero/hero.png"
+              imageURL="/images/pre-final/golden.jpg"
             />
           </div>
           <div className="row-span-2 ">
             <MinistryCard
               title="Royal Rangers"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/hero/hero.png"
+              imageURL="/images/pre-final/royal.jpg"
             />
           </div>
           <div className="col-span-2 row-span-1 md:col-span-1 ">
             <MinistryCard
               title="Girl's Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/hero/hero.png"
+              imageURL="/images/pre-final/girls.jpg"
             />
           </div>
         </div>

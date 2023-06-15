@@ -1,3 +1,5 @@
+import React from "react";
+
 interface MinistryCardProps {
   title: string;
   description: string;
@@ -11,10 +13,14 @@ const MinistryCard: React.FC<MinistryCardProps> = ({
 }) => {
   return (
     <div
-      className="h-[100%] overflow-hidden rounded bg-cover p-4 shadow-lg"
-      style={{ backgroundImage: `url('${imageURL}')` }}
+      className="relative h-[100%] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
+      style={{
+        backgroundImage: `linear-gradient(
+          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
+        ),url(${imageURL})`,
+      }}
     >
-      <div className="flex h-[100%] flex-col justify-between">
+      <div className="flex h-[100%] flex-col justify-end">
         <div>
           <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
             {title}

@@ -1,6 +1,5 @@
 import AboutSectionOne from "@/components/Mission/AboutSectionOne";
 import AboutSectionTwo from "@/components/Mission/AboutSectionTwo";
-import Blog from "@/components/Blog";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
@@ -20,7 +19,7 @@ export default function Home() {
       <Features />
       <YearlyTheme />
       <AboutSectionOne />
-      <div className="mt-2 bg-missionBg bg-cover">
+      <div className="mt-2 bg-missionBg bg-cover bg-center">
         <AboutSectionTwo />
       </div>
       <Minisitries />
