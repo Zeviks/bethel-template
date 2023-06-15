@@ -22,7 +22,12 @@ const Features = () => {
             paragraph=""
           />
           <div className="flex flex-col gap-5 pt-10 lg:flex-row">
-            <div className="flex h-[500px] items-end justify-center rounded bg-rightIMG bg-cover px-6 lg:w-[75%] lg:px-8 xl:w-[70%] xl:px-12">
+            <div
+              className="flex h-[500px] items-end justify-center rounded bg-cover bg-center px-6 lg:w-[75%] lg:px-8 xl:w-[70%] xl:px-12"
+              style={{
+                backgroundImage: 'url("/images/pre-final/door-cross.jpg")',
+              }}
+            >
               <div className="container mb-12 flex h-[80px] w-full flex-col items-start justify-center rounded bg-dark">
                 <h2 className="lg:text-md text-center text-sm font-light text-white xl:text-lg">
                   We are located at:
@@ -36,7 +41,12 @@ const Features = () => {
               </div>
             </div>
 
-            <div className="flex h-[500px] w-full items-end justify-center rounded bg-leftIMG bg-cover px-6 md:px-12">
+            <div
+              className="flex h-[500px] w-full items-end justify-center rounded bg-cover bg-center px-6 md:px-12"
+              style={{
+                backgroundImage: 'url("/images/pre-final/church.jpg")',
+              }}
+            >
               <div className="container mb-12 flex h-16 items-center justify-evenly rounded bg-dark py-5 sm:h-20 md:h-24 lg:h-[80px]">
                 <h2 className="lg:text-md text-center text-sm font-medium text-lightPrimary sm:text-base md:text-lg xl:text-lg">
                   Our Service Times

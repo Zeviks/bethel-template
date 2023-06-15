@@ -3,13 +3,14 @@ import { Button } from "@material-tailwind/react";
 
 const ContactCTA = () => {
   return (
-    <div className="my-10 flex flex-col md:flex-row md:justify-between">
-      <p className="w-full font-light md:mr-6 md:w-[50ch]">
-        Lorem ipsum dolor sit amet consectetur. Sapien montes turpis
-        pellentesque quis mus. pellentesque a mus viverra sit.
+    <div className="my-10 flex w-full items-center md:flex-row md:justify-end">
+      <p className="w-fit font-light md:mr-4">
+        Feel free to reach out to us during office hours.
       </p>
       <a href="/ministries">
-        <Button variant="outlined">View All</Button>
+        <Button variant="outlined" className="text-dark">
+          Contact Us
+        </Button>
       </a>
     </div>
   );
