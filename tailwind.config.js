@@ -52,6 +52,7 @@ module.exports = withMT({
         testIMG: "url('/images/testIMG.jpg')",
         rightIMG: "url('/images/church/cross.png')",
         leftIMG: "url('/images/church/visit.jpg')",
+        ministries: "url('/images/pre-final/minstries-bg.jpg')",
       }),
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
