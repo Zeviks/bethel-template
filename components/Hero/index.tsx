@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 h-screen w-full overflow-hidden bg-cover bg-center py-0 pt-[100px] md:bg-fixed md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+      className="relative z-10 h-screen w-full overflow-hidden bg-cover bg-center py-0 pt-[100px] md:h-[100%] md:bg-fixed md:pt-[150px] md:pb-[120px] xl:h-screen xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
       style={{
         backgroundImage: 'url("/images/hero/heroName.png")',
         transform: "rotate(0deg)",

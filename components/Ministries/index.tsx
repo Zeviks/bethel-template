@@ -22,21 +22,21 @@ const Ministries = () => {
             <MinistryCard
               title="Women Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/pre-final/womens.jpg"
+              imageURL="/images/pre-final/womens.webp"
             />
           </div>
           <div className="row-span-2 ">
             <MinistryCard
               title="Kids Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/pre-final/kids.jpg"
+              imageURL="/images/pre-final/kids.webp"
             />
           </div>
           <div className="row-span-1">
             <MinistryCard
               title="Youth Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/pre-final/youth.jpg"
+              imageURL="/images/pre-final/youth.webp"
             />
           </div>
           {/* Bottom Row */}
@@ -44,21 +44,21 @@ const Ministries = () => {
             <MinistryCard
               title="Golden Agers"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/pre-final/golden.jpg"
+              imageURL="/images/pre-final/golden.webp"
             />
           </div>
           <div className="row-span-2 ">
             <MinistryCard
               title="Royal Rangers"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/pre-final/royal.jpg"
+              imageURL="/images/pre-final/royal.webp"
             />
           </div>
           <div className="col-span-2 row-span-1 md:col-span-1 ">
             <MinistryCard
               title="Girl's Ministries"
               description="Meets 7pm to 5pm @ Fellowship hall"
-              imageURL="/images/pre-final/girls.jpg"
+              imageURL="/images/pre-final/girls.webp"
             />
           </div>
         </div>

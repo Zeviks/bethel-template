@@ -6,31 +6,31 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Leaders() {
-  const developers = [
+  const staff = [
     {
       name: "REV. RICK REYES",
       jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p1.jpg",
+      image: "/images/headshots/p1.webp",
     },
     {
       name: "REV. RICK REYES",
       jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p2.jpg",
+      image: "/images/headshots/p2.webp",
     },
     {
       name: "REV. RICK REYES",
       jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p3.jpg",
+      image: "/images/headshots/p3.webp",
     },
     {
       name: "REV. RICK REYES",
       jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p4.jpg",
+      image: "/images/headshots/p4.webp",
     },
     {
       name: "REV. RICK REYES",
       jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p5.jpg",
+      image: "/images/headshots/p5.webp",
     },
   ];
 
@@ -84,19 +84,19 @@ export default function Leaders() {
 
         <div className="container pt-20">
           <Slider {...settings}>
-            {developers.map((developer, index) => (
+            {staff.map((staff, index) => (
               <div
                 key={index}
                 className="h-[400px] w-[200px] px-2 sm:w-[250px] md:w-[300px]"
               >
                 <img
-                  src={developer.image}
-                  alt={developer.name}
+                  src={staff.image}
+                  alt={staff.name}
                   className="h-full w-full bg-cover bg-center object-cover shadow-sm shadow-blue-gray-900/50"
                 />
                 <div className="pt-3">
-                  <h3 className="font-semibold">{developer.name}</h3>
-                  <p className="font-base text-primary">{developer.jobTitle}</p>
+                  <h3 className="font-semibold">{staff.name}</h3>
+                  <p className="font-base text-primary">{staff.jobTitle}</p>
                 </div>
               </div>
             ))}
