@@ -7,7 +7,7 @@ const Page = () => {
         <img
           alt="Ministries Header"
           className="block h-[700px] w-full"
-          src="/images/pre-final/minstries-bg.jpg"
+          src="/images/pre-final/testBG.jpg"
           style={{ filter: "brightness(0.7)" }}
         />
         <h1 className="absolute inset-0 flex items-center justify-center text-center text-7xl font-bold text-white">
