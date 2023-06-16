@@ -13,7 +13,7 @@ const Features = () => {
         <SectionHeading heading="Our Church" />
       </div>
       <section
-        id="features"
+        id="our-church"
         className="lg:py-25 bg-primary/[.03] py-16 md:py-20"
       >
         <div className="container">

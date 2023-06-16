@@ -1,5 +1,5 @@
-import AboutSectionOne from "@/components/Mission/AboutSectionOne";
-import AboutSectionTwo from "@/components/Mission/AboutSectionTwo";
+import AboutSectionOne from "@/components/OurMission/MissionHeading";
+import AboutSectionTwo from "@/components/OurMission/MissionBody";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const AboutPage = () => {

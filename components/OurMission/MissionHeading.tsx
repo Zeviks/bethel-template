@@ -1,8 +1,8 @@
 import SectionHeading from "../SectionHeading";
 
-const AboutSectionOne = () => {
+const MissionHeading = () => {
   return (
-    <section id="about" className="my-10 sm:my-12 md:my-16 lg:my-20">
+    <section id="our-mission" className="my-10 sm:my-12 md:my-16 lg:my-20">
       <SectionHeading heading="Our Mission" />
       <div className="container mx-auto mt-8 sm:mt-10 md:mt-12">
         <div className="flex flex-col lg:flex-row">
@@ -19,4 +19,4 @@ const AboutSectionOne = () => {
   );
 };
 
-export default AboutSectionOne;
+export default MissionHeading;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const AboutSectionTwo = () => {
+const MissionBody = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container static flex flex-wrap items-center text-4xl font-semibold text-white">
@@ -35,4 +35,4 @@ const AboutSectionTwo = () => {
   );
 };
 
-export default AboutSectionTwo;
+export default MissionBody;

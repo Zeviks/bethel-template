@@ -70,7 +70,7 @@ export default function Leaders() {
   };
 
   return (
-    <section className="pt-10">
+    <section className="pt-10" id="our-leaders">
       <SectionHeading heading="Our Leaders" />
 
       <div className="container my-20 flex flex-col items-center justify-between">

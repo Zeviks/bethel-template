@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import HeroIcon from "../Icons/HeroIcon";
+import HeroIcon from "./HeroIcon";
 
 const Hero = () => {
   return (

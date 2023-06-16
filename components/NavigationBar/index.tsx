@@ -51,7 +51,7 @@ const NavigationBar = () => {
             {/* Image Container */}
             <div className=" max-w-full px-4 xl:mr-12">
               <Link
-                href="/"
+                href="#home"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}

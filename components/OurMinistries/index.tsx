@@ -4,7 +4,7 @@ import MinistryCard from "./MinistryCard";
 
 const Ministries = () => {
   return (
-    <section className="yearly-gradient ">
+    <section className="yearly-gradient" id="our-ministries">
       <div className="container flex w-full flex-col items-center justify-between py-10 sm:flex-row">
         <h2 className="w-full text-center text-3xl font-semibold text-dark sm:w-[30ch] sm:text-left sm:text-4xl">
           Our Ministries
