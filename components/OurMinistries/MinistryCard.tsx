@@ -25,9 +25,9 @@ const MinistryCard: React.FC<MinistryCardProps> = ({
           <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
             {title}
           </h5>
-          <p className="text-neutral-600 mb-4 text-base font-light text-white">
+          {/* <p className="text-neutral-600 mb-4 text-base font-light text-white">
             {description}
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
