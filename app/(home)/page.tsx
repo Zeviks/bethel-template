@@ -8,12 +8,16 @@ import YearlyTheme from "@/components/YearlyTheme";
 import { Inter } from "@next/font/google";
 import MissionHeading from "@/components/OurMission/MissionHeading";
 import MissionBody from "@/components/OurMission/MissionBody";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import NavigationBar from "@/components/NavigationBar/index";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
+      <NavigationBar />
       <Hero />
       <ScrollUp />
       <Features />
@@ -25,6 +29,8 @@ export default function Home() {
       <Minisitries />
       <Leaders />
       <Contact />
+      <ScrollToTop />
+      <Footer />
     </>
   );
 }

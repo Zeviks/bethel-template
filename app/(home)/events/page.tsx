@@ -1,8 +1,10 @@
-import React from "react";
+import Footer from "@/components/Footer";
+import NavigationBar from "@/components/NavigationBar/index";
 
 const Page = () => {
   return (
-    <div>
+    <>
+      <NavigationBar />
       <div className="ministry-header relative h-full">
         <img
           alt="Ministries Header"
@@ -17,7 +19,8 @@ const Page = () => {
       <div className="container my-10 flex h-[80vh] w-full items-center justify-center border shadow-lg">
         <h1 className="text-6xl font-bold text-gray-500">Calendar Image</h1>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
