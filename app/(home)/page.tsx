@@ -12,9 +12,16 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import NavigationBar from "@/components/NavigationBar/index";
 
+import { client } from "../../sanity/lib/client";
+import { groq } from "next-sanity";
+
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const query = groq`*[_type == "pet"]`;
+
+const Home = async () => {
+  const pets = await client.fetch(query);
+
   return (
     <>
       <NavigationBar />
@@ -33,4 +40,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;
