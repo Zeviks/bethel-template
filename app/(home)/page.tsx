@@ -1,6 +1,6 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/CTA";
-import Features from "@/components/OurChurch";
+import OurChurch from "@/components/OurChurch";
 import Hero from "@/components/Hero";
 import Leaders from "@/components/OurLeaders";
 import Minisitries from "@/components/OurMinistries";
@@ -18,18 +18,19 @@ import { groq } from "next-sanity";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const query = groq`*[_type == 'hero'][0]`;
+const heroQuery = groq`*[_type == 'hero'][0]`;
+const churchQuery = groq`*[_type == 'about'][0]`;
 
 const Home = async () => {
-  const heroContent = await client.fetch(query);
+  const heroContent = await client.fetch(heroQuery);
+  const churchContent = await client.fetch(churchQuery);
 
   return (
     <>
       <NavigationBar />
       <Hero hero={heroContent} />
-
       <ScrollUp />
-      <Features />
+      <OurChurch church={churchContent} />
       <YearlyTheme />
       <MissionHeading />
       <div className="mt-2 bg-missionBg bg-cover bg-center">
