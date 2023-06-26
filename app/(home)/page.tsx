@@ -11,21 +11,23 @@ import MissionBody from "@/components/OurMission/MissionBody";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import NavigationBar from "@/components/NavigationBar/index";
+import { urlForImage } from "@/sanity/lib/image";
 
 import { client } from "../../sanity/lib/client";
 import { groq } from "next-sanity";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const query = groq`*[_type == "pet"]`;
+const query = groq`*[_type == 'hero'][0]`;
 
 const Home = async () => {
-  const pets = await client.fetch(query);
+  const heroContent = await client.fetch(query);
 
   return (
     <>
       <NavigationBar />
-      <Hero />
+      <Hero hero={heroContent} />
+
       <ScrollUp />
       <Features />
       <YearlyTheme />
