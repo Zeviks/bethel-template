@@ -6,21 +6,23 @@ export default defineType({
   type: "document",
   fields: [
     defineField({
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: "ministryName",
-      title: "Name of ministry",
+      name: "themeTitle",
+      title: "Theme Title",
       type: "string",
     }),
     defineField({
-      name: "description",
-      title: "Minsitry description",
+      name: "themeYear",
+      title: "Theme Year",
+      type: "number",
+    }),
+    defineField({
+      name: "themeVerse",
+      title: "Theme's Verse",
+      type: "string",
+    }),
+    defineField({
+      name: "themeVerseSource",
+      title: "Theme's Verse Source",
       type: "string",
     }),
   ],

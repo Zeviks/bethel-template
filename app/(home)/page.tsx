@@ -20,10 +20,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 const heroQuery = groq`*[_type == 'hero'][0]`;
 const churchQuery = groq`*[_type == 'about'][0]`;
+const yearlyQuery = groq`*[_type == 'yearlyTheme'][0]`;
 
 const Home = async () => {
   const heroContent = await client.fetch(heroQuery);
   const churchContent = await client.fetch(churchQuery);
+  const yearlyContent = await client.fetch(yearlyQuery);
 
   return (
     <>
@@ -31,7 +33,7 @@ const Home = async () => {
       <Hero hero={heroContent} />
       <ScrollUp />
       <OurChurch church={churchContent} />
-      <YearlyTheme />
+      <YearlyTheme yearly={yearlyContent} />
       <MissionHeading />
       <div className="mt-2 bg-missionBg bg-cover bg-center">
         <MissionBody />

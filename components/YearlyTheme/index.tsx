@@ -1,4 +1,4 @@
-const YearlyTheme = () => {
+const YearlyTheme = ({ yearly }) => {
   return (
     <section className="relative z-10">
       <div className="yearly-gradient h-fit w-full bg-primary/[50%]">
@@ -8,25 +8,21 @@ const YearlyTheme = () => {
               This Year's Theme
             </span>
             <h2 className="w-full text-3xl font-medium leading-tight tracking-tight md:w-[18ch] md:text-4xl">
-              Let us love one another as he has loved us.
+              {yearly.themeTitle}
             </h2>
           </div>
 
           <div className="relative z-[999] mt-0 flex w-full flex-col justify-between rounded bg-dark p-6 md:h-[350px] md:p-12 lg:bottom-10 lg:w-[80%]">
             <span className="z-[999] w-fit rounded-full bg-primary py-2.5 px-6 text-dark md:px-9">
-              2023
+              {yearly.themeYear}
             </span>
             <p className="py-8 pl-0 text-lg font-bold text-white sm:text-2xl md:pl-6 md:text-2xl lg:text-xl">
               “{" "}
-              <span className="font-light leading-6">
-                Beloved, let us love one another, because love is from God;
-                everyone who loves is born of God and knows God. Whoever does
-                not love does not know God, for God is love.
-              </span>{" "}
+              <span className="font-light leading-6">{yearly.themeVerse}</span>{" "}
               ”
             </p>
             <span className="text-end text-lg font-bold text-white sm:text-xl md:text-xl">
-              1 John 4:7-21
+              {yearly.themeVerseSource}
             </span>
           </div>
         </div>
