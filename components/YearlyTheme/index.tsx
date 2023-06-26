@@ -7,7 +7,7 @@ const YearlyTheme = ({ yearly }) => {
             <span className="mb-2 text-sm font-light md:text-lg">
               This Year's Theme
             </span>
-            <h2 className="w-full text-3xl font-medium leading-tight tracking-tight md:w-[18ch] md:text-4xl">
+            <h2 className="w-full text-3xl font-medium leading-tight tracking-tight md:w-[18ch] md:text-5xl">
               {yearly.themeTitle}
             </h2>
           </div>

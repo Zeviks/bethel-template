@@ -1,13 +1,5 @@
 import { defineField, defineType } from "sanity";
-import defaultImage from "@/utils/defaultImage";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
-
-const defaultImageValidation = (rule, context) => {
-  if (!context.document.mainImage) {
-    context.parent.mainImage = defaultImage;
-  }
-  return { valid: true };
-};
 
 export default defineType({
   name: "hero",

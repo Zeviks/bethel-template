@@ -11,7 +11,6 @@ import MissionBody from "@/components/OurMission/MissionBody";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import NavigationBar from "@/components/NavigationBar/index";
-import { urlForImage } from "@/sanity/lib/image";
 
 import { client } from "../../sanity/lib/client";
 import { groq } from "next-sanity";
@@ -21,11 +20,13 @@ const inter = Inter({ subsets: ["latin"] });
 const heroQuery = groq`*[_type == 'hero'][0]`;
 const churchQuery = groq`*[_type == 'about'][0]`;
 const yearlyQuery = groq`*[_type == 'yearlyTheme'][0]`;
+const leadersQuery = groq`*[_type == 'leader']`;
 
 const Home = async () => {
   const heroContent = await client.fetch(heroQuery);
   const churchContent = await client.fetch(churchQuery);
   const yearlyContent = await client.fetch(yearlyQuery);
+  const leadersContent = await client.fetch(leadersQuery);
 
   return (
     <>
@@ -39,7 +40,7 @@ const Home = async () => {
         <MissionBody />
       </div>
       <Minisitries />
-      <Leaders />
+      <Leaders leaders={leadersContent} />
       <Contact />
       <ScrollToTop />
       <Footer />
