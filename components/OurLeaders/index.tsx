@@ -4,36 +4,9 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { urlForImage } from "@/sanity/lib/image";
 
-export default function Leaders() {
-  const staff = [
-    {
-      name: "REV. RICK REYES",
-      jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p1.webp",
-    },
-    {
-      name: "REV. RICK REYES",
-      jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p2.webp",
-    },
-    {
-      name: "REV. RICK REYES",
-      jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p3.webp",
-    },
-    {
-      name: "REV. RICK REYES",
-      jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p4.webp",
-    },
-    {
-      name: "REV. RICK REYES",
-      jobTitle: "LEAD PASTOR",
-      image: "/images/headshots/p5.webp",
-    },
-  ];
-
+export default function Leaders({ leaders }) {
   let settings = {
     className: "",
     dots: true,
@@ -84,19 +57,21 @@ export default function Leaders() {
 
         <div className="container pt-20">
           <Slider {...settings}>
-            {staff.map((staff, index) => (
+            {leaders.map((leader) => (
               <div
-                key={index}
+                key={leader._id}
                 className="h-[400px] w-[200px] px-2 sm:w-[250px] md:w-[300px]"
               >
                 <img
-                  src={staff.image}
-                  alt={staff.name}
+                  src={urlForImage(leader.mainImage).url()}
+                  alt={leader.fullname}
                   className="h-full w-full bg-cover bg-center object-cover shadow-sm shadow-blue-gray-900/50"
                 />
                 <div className="pt-3">
-                  <h3 className="font-semibold">{staff.name}</h3>
-                  <p className="font-base text-primary">{staff.jobTitle}</p>
+                  <h3 className="font-semibold uppercase">{leader.fullname}</h3>
+                  <p className="font-base uppercase text-primary">
+                    {leader.title}
+                  </p>
                 </div>
               </div>
             ))}

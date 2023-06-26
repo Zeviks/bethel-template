@@ -5,8 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
 import ContactCTA from "../ContactCTA";
+import { urlForImage } from "@/sanity/lib/image";
 
-const Features = () => {
+const OurChurch = ({ church }) => {
+  const leftImg = urlForImage(church.leftImage).url();
+  const rightImg = urlForImage(church.rightImage).url();
+
   return (
     <>
       <div className="pt-10">
@@ -25,7 +29,7 @@ const Features = () => {
             <div
               className="flex h-[500px] items-end justify-center rounded bg-cover bg-center px-6 lg:w-[75%] lg:px-8 xl:w-[70%] xl:px-12"
               style={{
-                backgroundImage: 'url("/images/pre-final/door-cross.webp")',
+                backgroundImage: `url(${leftImg})`,
               }}
             >
               <div className="container mb-12 flex h-[80px] w-full flex-col items-start justify-center rounded bg-dark">
@@ -44,7 +48,7 @@ const Features = () => {
             <div
               className="flex h-[500px] w-full items-end justify-center rounded bg-cover bg-center px-6 md:px-12"
               style={{
-                backgroundImage: 'url("/images/pre-final/church.webp")',
+                backgroundImage: `url(${rightImg})`,
               }}
             >
               <div className="container mb-12 flex h-16 items-center justify-evenly rounded bg-dark py-5 sm:h-20 md:h-24 lg:h-[80px]">
@@ -68,4 +72,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default OurChurch;

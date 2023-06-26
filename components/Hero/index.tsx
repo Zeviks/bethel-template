@@ -1,14 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import HeroIcon from "./HeroIcon";
+import { urlForImage } from "@/sanity/lib/image";
+import defaultImage from "@/utils/defaultImage";
 
-const Hero = () => {
+const Hero = ({ hero }) => {
+  const heroImg = urlForImage(hero.mainImage).url() || defaultImage;
+
+  // const heroImg = hero.mainImage
+  //   ? urlForImage(hero.mainImage).url()
+  //   : defaultImage.url;
+
   return (
     <section
       id="home"
       className="relative z-10 h-screen w-full overflow-hidden bg-cover bg-center py-0 pt-[100px] md:h-[100%] md:bg-fixed md:pt-[150px] md:pb-[120px] xl:h-screen xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
       style={{
-        backgroundImage: 'url("/images/hero/heroName.png")',
+        background: `url(${heroImg}) no-repeat center center / cover`,
         transform: "rotate(0deg)",
       }}
     >

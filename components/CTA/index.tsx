@@ -1,7 +1,4 @@
 import React from "react";
-import { FiPhone } from "react-icons/fi";
-import { BiBuilding } from "react-icons/bi";
-import { AiOutlineMail } from "react-icons/ai";
 
 const Contact = () => {
   return (
@@ -24,15 +21,12 @@ const Contact = () => {
               <div className="flex flex-col justify-between lg:flex-row">
                 <div className="flex flex-col gap-5 text-lg">
                   <div className="flex items-center">
-                    <FiPhone className="mr-2 text-3xl" />
                     <p>
-                      <span className="font-semibold">Office phone:</span>{" "}
-                      <br />
+                      <span className="font-semibold">Tel:</span> <br />
                       (956) 787-1737
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <BiBuilding className="mr-2 text-3xl" />
                     <p>
                       <span className="font-semibold">Office hours:</span>{" "}
                       <br />
@@ -41,7 +35,6 @@ const Contact = () => {
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <AiOutlineMail className="mr-2 text-3xl" />
                     <p>
                       <span className="font-semibold">Email:</span> <br />
                       bethelpharr.church@gmail.com
