@@ -1,8 +1,15 @@
-import React from "react";
 import Footer from "@/components/Footer";
 import NavigationBar from "@/components/NavigationBar/index";
 
-const Page = () => {
+import { client } from "../../../sanity/lib/client";
+import { groq } from "next-sanity";
+
+import { urlForImage } from "@/sanity/lib/image";
+
+const ministriesQuery = groq`*[_type == 'ministries']`;
+
+const Page = async () => {
+  const ministries = await client.fetch(ministriesQuery);
   return (
     <>
       <NavigationBar />
@@ -31,189 +38,29 @@ const Page = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[300px] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
+          {ministries.map((ministry) => (
+            <article className="overflow-hidden shadow-lg" key={ministry._id}>
+              <div
+                className="relative h-[300px] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
+                style={{
+                  backgroundImage: `linear-gradient(
+                    180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
+                  ),url("${urlForImage(ministry.mainImage).url()}")`,
+                }}
+              >
+                <div className="flex h-[100%] flex-col justify-end">
+                  <div>
+                    <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
+                      {ministry.name}
+                    </h5>
+                    <p className="text-neutral-600 mb-4 text-base font-light text-white">
+                      {ministry.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[300px] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[100%] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[300px] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[300px] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[100%] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[100%] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="overflow-hidden shadow-lg">
-            <div
-              className="relative h-[100%] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
-              style={{
-                backgroundImage: `linear-gradient(
-          180deg, rgba(0, 10, 26, 0) 35.38%, #15192A 100%
-        ),url("https://picsum.photos/600/400/?nature")`,
-              }}
-            >
-              <div className="flex h-[100%] flex-col justify-end">
-                <div>
-                  <h5 className="text-neutral-800 mb-2 text-xl font-medium leading-tight text-white">
-                    Women Ministries
-                  </h5>
-                  <p className="text-neutral-600 mb-4 text-base font-light text-white">
-                    Meeting on <span className="font-bold">Fridays</span> @{" "}
-                    <span className="font-bold">7pm</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
+            </article>
+          ))}
         </div>
       </div>
       <Footer />

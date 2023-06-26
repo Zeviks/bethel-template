@@ -30,7 +30,7 @@ export default defineConfig({
               .id("hero")
               .child(S.document().schemaType("hero").documentId("hero")),
             S.listItem()
-              .title("About Section")
+              .title("Our Church Section")
               .id("about")
               .child(S.document().schemaType("about").documentId("about")),
             S.listItem()
@@ -42,7 +42,7 @@ export default defineConfig({
 
             // Regular document types
             S.documentTypeListItem("leader").title("Our Leaders"),
-            S.documentTypeListItem("ministries").title("Ministries"),
+            S.documentTypeListItem("ministries").title("Our Ministries"),
           ]),
     }),
     visionTool(),
