@@ -21,6 +21,7 @@ const Page = async () => {
         <Image
           alt="Ministries Header"
           src={urlForImage(ministriesPageImage.mainImage).url()}
+          style={{ filter: "brightness(0.7)" }}
           layout="fill"
           objectFit="cover"
           className="brightness-70 block"
