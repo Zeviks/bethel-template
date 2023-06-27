@@ -47,6 +47,10 @@ export default defineConfig({
                   .schemaType("ministriesPageImage")
                   .documentId("ministriesPageImage")
               ),
+            S.listItem()
+              .title("Events Page")
+              .id("event")
+              .child(S.document().schemaType("event").documentId("event")),
 
             // Regular document types
             S.documentTypeListItem("leader").title("Our Leaders"),
