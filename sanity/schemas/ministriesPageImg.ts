@@ -1,5 +1,15 @@
-import { defineField, defineType } from "sanity";
+import { defineField, defineType, Rule } from "sanity";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
+
+interface ImageFieldValue {
+  asset: {
+    _ref: string;
+  };
+}
+
+interface Fields {
+  mainImage: ImageFieldValue;
+}
 
 export default defineType({
   name: "ministriesPageImage",
@@ -10,8 +20,8 @@ export default defineType({
       name: "mainImage",
       title: "Main image",
       type: "image",
-      validation: (rule) =>
-        rule.custom((value) => {
+      validation: (rule: Rule) =>
+        rule.custom((value: ImageFieldValue) => {
           if (!value) {
             return "Image field cannot be left empty";
           }
@@ -35,4 +45,23 @@ export default defineType({
       },
     }),
   ],
+  validation: (Rule: Rule) => [
+    Rule.custom((fields: Fields) => {
+      const missingFields: string[] = [];
+      if (!fields.mainImage) {
+        missingFields.push("Main image");
+      }
+      if (missingFields.length > 0) {
+        return `The following fields must be filled: ${missingFields.join(
+          ", "
+        )}`;
+      }
+      return true;
+    }),
+  ],
+  preview: {
+    select: {
+      title: "ministriesPageImage",
+    },
+  },
 });

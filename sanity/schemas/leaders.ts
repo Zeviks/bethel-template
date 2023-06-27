@@ -8,8 +8,8 @@ interface ImageFieldValue {
 }
 
 interface Fields {
-  fullname?: string;
-  title?: string;
+  fullname: string;
+  title: string;
 }
 
 export default defineType({

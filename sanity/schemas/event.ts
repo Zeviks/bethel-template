@@ -1,5 +1,16 @@
-import { defineField, defineType } from "sanity";
+import { defineField, defineType, Rule } from "sanity";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
+
+interface ImageFieldValue {
+  asset: {
+    _ref: string;
+  };
+}
+
+interface Fields {
+  eventPageImage: ImageFieldValue;
+  eventCalendarImage: ImageFieldValue;
+}
 
 export default defineType({
   name: "event",
@@ -10,8 +21,8 @@ export default defineType({
       name: "eventPageImage",
       title: "Event's Page Image",
       type: "image",
-      validation: (rule) =>
-        rule.custom((value) => {
+      validation: (rule: Rule) =>
+        rule.custom((value: ImageFieldValue) => {
           if (!value) {
             return "Image field cannot be left empty";
           }
@@ -38,8 +49,8 @@ export default defineType({
       name: "eventCalendarImage",
       title: "Event's Calendar Image",
       type: "image",
-      validation: (rule) =>
-        rule.custom((value) => {
+      validation: (rule: Rule) =>
+        rule.custom((value: ImageFieldValue) => {
           if (!value) {
             return "Image field cannot be left empty";
           }
@@ -63,4 +74,27 @@ export default defineType({
       },
     }),
   ],
+  validation: (Rule: Rule) => [
+    Rule.custom((fields: Fields) => {
+      const missingFields: string[] = [];
+      if (!fields.eventPageImage) {
+        missingFields.push("Event's Page Image");
+      }
+      if (!fields.eventCalendarImage) {
+        missingFields.push("Event's Calendar Image");
+      }
+
+      if (missingFields.length > 0) {
+        return `The following fields must be filled: ${missingFields.join(
+          ", "
+        )}`;
+      }
+      return true;
+    }),
+  ],
+  preview: {
+    select: {
+      title: "event",
+    },
+  },
 });
