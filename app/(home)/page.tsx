@@ -11,7 +11,6 @@ import MissionBody from "@/components/OurMission/MissionBody";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import NavigationBar from "@/components/NavigationBar/index";
-
 import { client } from "../../sanity/lib/client";
 import { groq } from "next-sanity";
 
@@ -31,6 +30,7 @@ const Home = async () => {
   return (
     <>
       <NavigationBar />
+
       <Hero hero={heroContent} />
       <ScrollUp />
       <OurChurch church={churchContent} />
@@ -43,6 +43,7 @@ const Home = async () => {
       <Leaders leaders={leadersContent} />
       <Contact />
       <ScrollToTop />
+
       <Footer />
     </>
   );
