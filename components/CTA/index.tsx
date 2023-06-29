@@ -1,7 +1,17 @@
+"use client";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
+
 const Contact = () => {
   return (
     <section id="contact" className="overflow-hidden py-16">
-      <div className="container mx-auto">
+      <motion.div
+        variants={fadeIn("up", "tween", 0.2, 0.4)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="container mx-auto"
+      >
         <div className="flex flex-wrap justify-center">
           <div className="w-full px-4">
             <div className="wow fadeInUp yearly-gradient mb-12 w-full rounded-md py-11 px-8 dark:bg-dark">
@@ -52,7 +62,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
