@@ -68,7 +68,13 @@ export default function Leaders({ leaders }) {
           God’s heart for us to do this life alone.
         </motion.p>
 
-        <div className="container pt-20">
+        <motion.div
+          variants={fadeIn("bottom", "tween", 0.2, 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="container pt-20"
+        >
           <Slider {...settings}>
             {leaders.map((leader) => (
               <div
@@ -89,7 +95,7 @@ export default function Leaders({ leaders }) {
               </div>
             ))}
           </Slider>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
