@@ -1,7 +1,9 @@
+"use client";
 import Footer from "@/components/Footer";
 import NavigationBar from "@/components/NavigationBar/index";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 import { client } from "../../../sanity/lib/client";
 import { groq } from "next-sanity";
 
@@ -24,9 +26,15 @@ const Page = async () => {
           objectFit="cover"
           className="brightness-70 block"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-center text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+        <motion.h1
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="absolute inset-0 flex items-center justify-center text-center text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+        >
           Events
-        </h1>
+        </motion.h1>
       </div>
 
       <div className="container my-10 flex h-[80vh] w-full items-center justify-center overflow-hidden border shadow-lg">
