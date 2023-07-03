@@ -2,25 +2,24 @@
 import Link from "next/link";
 import HeroIcon from "./HeroIcon";
 import { urlForImage } from "@/sanity/lib/image";
-import defaultImage from "@/utils/defaultImage";
 import { motion } from "framer-motion";
 
 const Hero = ({ hero }) => {
-  const heroImg = urlForImage(hero.mainImage).url() || defaultImage;
-
-  // const heroImg = hero.mainImage
-  //   ? urlForImage(hero.mainImage).url()
-  //   : defaultImage.url;
+  const heroImg = urlForImage(hero.mainImage).url();
 
   return (
     <section
       id="home"
-      className="relative z-10 h-screen w-full overflow-hidden bg-cover bg-center py-0 pt-[100px] md:h-[100%] md:bg-fixed md:pt-[150px] md:pb-[120px] xl:h-screen xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
-      style={{
-        background: `url(${heroImg}) no-repeat center center / cover`,
-        transform: "rotate(0deg)",
-      }}
+      className="relative z-10 h-screen w-full overflow-hidden py-0 pt-[100px] md:h-[100%] md:pt-[150px] md:pb-[120px] xl:h-screen xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
     >
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroImg})`,
+          filter: "brightness(0.6)",
+          transform: "rotate(0deg)",
+        }}
+      ></div>
       <motion.div className="container flex h-[75%] flex-col justify-center">
         <div className="-mx-4 mt-8 flex flex-wrap">
           <div className="w-full px-4">
@@ -32,13 +31,11 @@ const Hero = ({ hero }) => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="mb-10 font-['Bellefair'] text-5xl leading-tight text-white sm:text-7xl sm:leading-tight md:mt-2 md:text-8xl md:leading-tight lg:text-[110px] xl:text-9xl"
+                className="mb-10 font-['Bellefair'] text-5xl uppercase leading-tight text-white sm:text-7xl sm:leading-tight md:mt-2 md:text-8xl md:leading-tight lg:text-[110px] xl:text-9xl"
               >
-                SERVING GOD
-                <br />
-                <span>
-                  WITH{" "}
-                  <span className="rounded-md bg-primary text-dark">LOVE</span>
+                {hero.mainHeading}
+                <span className="rounded-md bg-primary text-dark">
+                  {hero.mainHighlightHeading}
                 </span>
               </motion.h1>
               <motion.p
@@ -47,8 +44,7 @@ const Hero = ({ hero }) => {
                 transition={{ delay: 0.5 }}
                 className="xs:text-md mb-12 text-sm font-light text-white sm:text-lg md:text-2xl"
               >
-                Experience God’s presence with us at Bethel in Pharr,
-                <br /> on Sundays & Wednesdays.
+                {hero.subHeading}
               </motion.p>
               <motion.div
                 initial={{ opacity: 0 }}

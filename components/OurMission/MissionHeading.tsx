@@ -31,13 +31,13 @@ const MissionHeading = () => {
             variants={fadeIn("up", "tween", 0.2, 1.5)}
             className="mb-5 w-full border-b-2 border-primary text-dark sm:w-auto"
           >
-            Show Compassion.
+            Know Your Purpose.
           </motion.span>
           <motion.span
             variants={fadeIn("up", "tween", 0.2, 2)}
             className="mb-5 w-full border-b-2 border-primary text-dark sm:w-auto"
           >
-            Learn Your Purpose.
+            Show Compassion.
           </motion.span>
         </motion.div>
       </div>
