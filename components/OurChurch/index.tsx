@@ -6,6 +6,8 @@ import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
 import ContactCTA from "../ContactCTA";
 import { urlForImage } from "@/sanity/lib/image";
+import { motion } from "framer-motion";
+import { textVariant2, fadeIn, staggerContainer } from "@/utils/motion";
 
 const OurChurch = ({ church }) => {
   const leftImg = urlForImage(church.leftImage).url();
@@ -21,12 +23,26 @@ const OurChurch = ({ church }) => {
         className="lg:py-25 bg-primary/[.03] py-16 md:py-20"
       >
         <div className="container">
-          <SectionTitle
-            title="We are a congregation firmly grounded in the love of God, devoted to serving him under any circumstance."
-            paragraph=""
-          />
-          <div className="flex flex-col gap-5 pt-10 lg:flex-row">
-            <div
+          <motion.div
+            variants={textVariant2}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false }}
+          >
+            <SectionTitle
+              title="We are a congregation firmly grounded in the love of God, devoted to serving him under any circumstance."
+              paragraph=""
+            />
+          </motion.div>
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+            className="flex flex-col gap-5 pt-10 lg:flex-row"
+          >
+            <motion.div
+              variants={fadeIn("right", "tween", 0.2, 1)}
               className="flex h-[500px] items-end justify-center rounded bg-cover bg-center px-6 lg:w-[75%] lg:px-8 xl:w-[70%] xl:px-12"
               style={{
                 backgroundImage: `url(${leftImg})`,
@@ -43,9 +59,10 @@ const OurChurch = ({ church }) => {
                   400 S. I Rd, S Veterans Blvd, Pharr, TX 78577
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
+              variants={fadeIn("left", "tween", 0.3, 1)}
               className="flex h-[500px] w-full items-end justify-center rounded bg-cover bg-center px-6 md:px-12"
               style={{
                 backgroundImage: `url(${rightImg})`,
@@ -63,8 +80,8 @@ const OurChurch = ({ church }) => {
                   <span className="font-semibold">5pm</span>
                 </p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <ContactCTA />
         </div>
       </section>

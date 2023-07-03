@@ -1,5 +1,16 @@
-import { defineField, defineType } from "sanity";
+import { defineField, defineType, Rule } from "sanity";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
+
+interface ImageFieldValue {
+  asset: {
+    _ref: string;
+  };
+}
+
+interface Fields {
+  leftImage: string;
+  rightImage: string;
+}
 
 export default defineType({
   name: "about",
@@ -10,8 +21,8 @@ export default defineType({
       name: "leftImage",
       title: "Left image",
       type: "image",
-      validation: (rule) =>
-        rule.custom((value) => {
+      validation: (rule: Rule) =>
+        rule.custom((value: ImageFieldValue | undefined) => {
           if (!value) {
             return "Image field cannot be left empty";
           }
@@ -38,8 +49,8 @@ export default defineType({
       name: "rightImage",
       title: "Right image",
       type: "image",
-      validation: (rule) =>
-        rule.custom((value) => {
+      validation: (rule: Rule) =>
+        rule.custom((value: ImageFieldValue | undefined) => {
           if (!value) {
             return "Image field cannot be left empty";
           }
@@ -63,4 +74,28 @@ export default defineType({
       },
     }),
   ],
+
+  validation: (Rule: Rule) => [
+    Rule.custom((fields: Fields) => {
+      const missingFields: string[] = [];
+      if (!fields.rightImage) {
+        missingFields.push("Ministry's Name");
+      }
+      if (!fields.leftImage) {
+        missingFields.push("Ministry's Description");
+      }
+
+      if (missingFields.length > 0) {
+        return `The following fields must be filled: ${missingFields.join(
+          ", "
+        )}`;
+      }
+      return true;
+    }),
+  ],
+  preview: {
+    select: {
+      title: "about",
+    },
+  },
 });

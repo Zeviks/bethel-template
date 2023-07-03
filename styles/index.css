@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @layer base {
   body {
     font-family: "Inter", sans-serif;
@@ -64,4 +67,8 @@ background: linear-gradient(180deg, rgba(153,219,255,1) 0%, rgba(229,246,255,1) 
   bottom: 20px;
   right: 20px;
   /* Add any additional styles */
+}
+
+.hero-gradient {
+  filter: "brightness(0.7)",
 }

@@ -9,14 +9,11 @@ interface ImageFieldValue {
 
 interface Fields {
   mainImage: ImageFieldValue;
-  mainHeading: string;
-  mainHighlightHeading: string;
-  subHeading: string;
 }
 
 export default defineType({
-  name: "hero",
-  title: "Hero Section",
+  name: "ministriesPageImage",
+  title: "Ministries Page Image",
   type: "document",
   fields: [
     defineField({
@@ -47,43 +44,12 @@ export default defineType({
         hotspot: true,
       },
     }),
-    defineField({
-      name: "mainHeading",
-      title: "Main Heading",
-      type: "string",
-      validation: (Rule) => Rule.required().min(10).max(80),
-      description: "Enter the main heading",
-    }),
-    defineField({
-      name: "mainHighlightHeading",
-      title: "Main Heading Highlight",
-      type: "string",
-      validation: (Rule) => Rule.required().min(2).max(4),
-      description: "Enter the main heading",
-    }),
-
-    defineField({
-      name: "subHeading",
-      title: "Sub Heading",
-      type: "string",
-      validation: (Rule) => Rule.required().min(10).max(200),
-      description: "Enter the sub heading",
-    }),
   ],
   validation: (Rule: Rule) => [
     Rule.custom((fields: Fields) => {
       const missingFields: string[] = [];
       if (!fields.mainImage) {
         missingFields.push("Main image");
-      }
-      if (!fields.mainHeading) {
-        missingFields.push("Main heading");
-      }
-      if (!fields.subHeading) {
-        missingFields.push("Sub heading");
-      }
-      if (!fields.mainHighlightHeading) {
-        missingFields.push("Sub heading");
       }
       if (missingFields.length > 0) {
         return `The following fields must be filled: ${missingFields.join(
@@ -95,7 +61,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: "mainHeading",
+      title: "ministriesPageImage",
     },
   },
 });

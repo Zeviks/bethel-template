@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import menuData from "./menuData";
+import { motion } from "framer-motion";
+import { navVariants } from "@/utils/motion";
 
 const NavigationBar = () => {
   // Navbar toggle
@@ -46,7 +48,12 @@ const NavigationBar = () => {
         `}
       >
         {/* Parent Element */}
-        <div className="container">
+        <motion.div
+          variants={navVariants}
+          initial="hidden"
+          whileInView="show"
+          className="container"
+        >
           <div className="relative -mx-4 flex items-center justify-between">
             {/* Image Container */}
             <div className=" max-w-full px-4 xl:mr-12">
@@ -166,7 +173,7 @@ const NavigationBar = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </header>
     </>
   );
