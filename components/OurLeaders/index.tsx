@@ -8,7 +8,7 @@ import { urlForImage } from "@/sanity/lib/image";
 import { motion } from "framer-motion";
 import { staggerContainer, textVariant2, fadeIn } from "@/utils/motion";
 
-export default function Leaders({ leaders }) {
+export default function Leaders({ leaders, heading }) {
   let settings = {
     className: "",
     dots: true,
@@ -58,14 +58,13 @@ export default function Leaders({ leaders }) {
           variants={textVariant2}
           className="w-fit text-center text-4xl font-semibold text-dark md:text-5xl"
         >
-          Meet our leaders
+          {heading.leadersTitle}
         </motion.h2>
         <motion.p
           variants={fadeIn("left", "tween", 0.2, 0.3)}
           className="w-full pt-3 text-center text-xl font-light leading-tight md:w-[50ch]"
         >
-          Every believer was created to belong to a community. It was never
-          God’s heart for us to do this life alone.
+          {heading.leadersDescription}
         </motion.p>
 
         <motion.div

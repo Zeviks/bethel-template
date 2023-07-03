@@ -19,13 +19,17 @@ const inter = Inter({ subsets: ["latin"] });
 const heroQuery = groq`*[_type == 'hero'][0]`;
 const churchQuery = groq`*[_type == 'about'][0]`;
 const yearlyQuery = groq`*[_type == 'yearlyTheme'][0]`;
+const missionQuery = groq`*[_type == 'mission'][0]`;
 const leadersQuery = groq`*[_type == 'leader']`;
+const leadersHeadingQuery = groq`*[_type == 'leadersHeading'][0]`;
 
 const Home = async () => {
   const heroContent = await client.fetch(heroQuery);
+  const missionContent = await client.fetch(missionQuery);
   const churchContent = await client.fetch(churchQuery);
   const yearlyContent = await client.fetch(yearlyQuery);
   const leadersContent = await client.fetch(leadersQuery);
+  const leadersHeadingContent = await client.fetch(leadersHeadingQuery);
 
   return (
     <>
@@ -37,13 +41,12 @@ const Home = async () => {
       <YearlyTheme yearly={yearlyContent} />
       <MissionHeading />
       <div className="mt-2 bg-missionBg bg-cover bg-center">
-        <MissionBody />
+        <MissionBody mission={missionContent} />
       </div>
       <Minisitries />
-      <Leaders leaders={leadersContent} />
+      <Leaders leaders={leadersContent} heading={leadersHeadingContent} />
       <Contact />
       <ScrollToTop />
-
       <Footer />
     </>
   );

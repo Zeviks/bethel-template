@@ -40,6 +40,18 @@ export default defineConfig({
                 S.document().schemaType("yearlyTheme").documentId("yearlyTheme")
               ),
             S.listItem()
+              .title("Mission Section")
+              .id("mission")
+              .child(S.document().schemaType("mission").documentId("mission")),
+            S.listItem()
+              .title("Leaders Section")
+              .id("leadersHeading")
+              .child(
+                S.document()
+                  .schemaType("leadersHeading")
+                  .documentId("leadersHeading")
+              ),
+            S.listItem()
               .title("Ministries Page Image")
               .id("ministriesPageImage")
               .child(
