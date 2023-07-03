@@ -1,28 +1,42 @@
+"use client";
 import Footer from "@/components/Footer";
 import NavigationBar from "@/components/NavigationBar/index";
-
+import Image from "next/image";
 import { client } from "../../../sanity/lib/client";
 import { groq } from "next-sanity";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 import { urlForImage } from "@/sanity/lib/image";
 
 const ministriesQuery = groq`*[_type == 'ministries']`;
+const ministriesPageImageQuery = groq`*[_type == 'ministriesPageImage'][0]`;
 
 const Page = async () => {
   const ministries = await client.fetch(ministriesQuery);
+  const ministriesPageImage = await client.fetch(ministriesPageImageQuery);
   return (
     <>
       <NavigationBar />
-      <div className="ministry-header relative h-full">
-        <img
+      <div className="ministry-header relative h-[700px]">
+        <Image
           alt="Ministries Header"
-          className="block h-[700px] w-full"
-          src="/images/pre-final/testBG.jpg"
+          src={urlForImage(ministriesPageImage.mainImage).url()}
           style={{ filter: "brightness(0.7)" }}
+          layout="fill"
+          objectFit="cover"
+          className="brightness-70 block"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-center text-7xl font-bold text-white">
+
+        <motion.h1
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="absolute inset-0 flex items-center justify-center text-center text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+        >
           Our Ministries
-        </h1>
+        </motion.h1>
       </div>
 
       <div className="container mx-auto px-4 pt-[1rem] pb-[8rem] md:px-12">
@@ -37,9 +51,20 @@ const Page = async () => {
             Browse through our minstries below
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          {ministries.map((ministry) => (
-            <article className="overflow-hidden shadow-lg" key={ministry._id}>
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4"
+        >
+          {ministries.map((ministry, index) => (
+            <motion.article
+              key={ministry._id}
+              variants={fadeIn("left", "tween", 0.2, (index + 1) * 0.1)}
+              initial="hidden"
+              whileInView="show"
+              className="overflow-hidden shadow-lg"
+            >
               <div
                 className="relative h-[300px] overflow-hidden rounded bg-cover bg-center p-4 shadow-lg"
                 style={{
@@ -59,9 +84,9 @@ const Page = async () => {
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
       <Footer />
     </>

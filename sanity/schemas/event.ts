@@ -8,20 +8,18 @@ interface ImageFieldValue {
 }
 
 interface Fields {
-  mainImage: ImageFieldValue;
-  mainHeading: string;
-  mainHighlightHeading: string;
-  subHeading: string;
+  eventPageImage: ImageFieldValue;
+  eventCalendarImage: ImageFieldValue;
 }
 
 export default defineType({
-  name: "hero",
-  title: "Hero Section",
+  name: "event",
+  title: "Events Page",
   type: "document",
   fields: [
     defineField({
-      name: "mainImage",
-      title: "Main image",
+      name: "eventPageImage",
+      title: "Event's Page Image",
       type: "image",
       validation: (rule: Rule) =>
         rule.custom((value: ImageFieldValue) => {
@@ -48,43 +46,44 @@ export default defineType({
       },
     }),
     defineField({
-      name: "mainHeading",
-      title: "Main Heading",
-      type: "string",
-      validation: (Rule) => Rule.required().min(10).max(80),
-      description: "Enter the main heading",
-    }),
-    defineField({
-      name: "mainHighlightHeading",
-      title: "Main Heading Highlight",
-      type: "string",
-      validation: (Rule) => Rule.required().min(2).max(4),
-      description: "Enter the main heading",
-    }),
+      name: "eventCalendarImage",
+      title: "Event's Calendar Image",
+      type: "image",
+      validation: (rule: Rule) =>
+        rule.custom((value: ImageFieldValue) => {
+          if (!value) {
+            return "Image field cannot be left empty";
+          }
 
-    defineField({
-      name: "subHeading",
-      title: "Sub Heading",
-      type: "string",
-      validation: (Rule) => Rule.required().min(10).max(200),
-      description: "Enter the sub heading",
+          const filetype = getExtension(value.asset._ref);
+
+          if (filetype !== "jpg" && filetype !== "png" && filetype !== "webp") {
+            return "Image must be a JPG or PNG";
+          }
+
+          const { width, height } = getImageDimensions(value.asset._ref);
+
+          if (width < 1200 || height < 630) {
+            return "Image must be at least 1200x630 pixels";
+          }
+
+          return true;
+        }),
+      options: {
+        hotspot: true,
+      },
     }),
   ],
   validation: (Rule: Rule) => [
     Rule.custom((fields: Fields) => {
       const missingFields: string[] = [];
-      if (!fields.mainImage) {
-        missingFields.push("Main image");
+      if (!fields.eventPageImage) {
+        missingFields.push("Event's Page Image");
       }
-      if (!fields.mainHeading) {
-        missingFields.push("Main heading");
+      if (!fields.eventCalendarImage) {
+        missingFields.push("Event's Calendar Image");
       }
-      if (!fields.subHeading) {
-        missingFields.push("Sub heading");
-      }
-      if (!fields.mainHighlightHeading) {
-        missingFields.push("Sub heading");
-      }
+
       if (missingFields.length > 0) {
         return `The following fields must be filled: ${missingFields.join(
           ", "
@@ -95,7 +94,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: "mainHeading",
+      title: "event",
     },
   },
 });

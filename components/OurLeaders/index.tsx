@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { urlForImage } from "@/sanity/lib/image";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant2, fadeIn } from "@/utils/motion";
 
 export default function Leaders({ leaders }) {
   let settings = {
@@ -46,16 +48,33 @@ export default function Leaders({ leaders }) {
     <section className="pt-10" id="our-leaders">
       <SectionHeading heading="Our Leaders" />
 
-      <div className="container my-20 flex flex-col items-center justify-between">
-        <h2 className="w-fit text-center text-4xl font-semibold text-dark md:text-5xl">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        variants={staggerContainer}
+        className="container my-20 flex flex-col items-center justify-between"
+      >
+        <motion.h2
+          variants={textVariant2}
+          className="w-fit text-center text-4xl font-semibold text-dark md:text-5xl"
+        >
           Meet our leaders
-        </h2>
-        <p className="w-full pt-3 text-center text-xl font-light leading-tight md:w-[50ch]">
+        </motion.h2>
+        <motion.p
+          variants={fadeIn("left", "tween", 0.2, 0.3)}
+          className="w-full pt-3 text-center text-xl font-light leading-tight md:w-[50ch]"
+        >
           Every believer was created to belong to a community. It was never
           God’s heart for us to do this life alone.
-        </p>
+        </motion.p>
 
-        <div className="container pt-20">
+        <motion.div
+          variants={fadeIn("bottom", "tween", 0.2, 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="container pt-20"
+        >
           <Slider {...settings}>
             {leaders.map((leader) => (
               <div
@@ -76,8 +95,8 @@ export default function Leaders({ leaders }) {
               </div>
             ))}
           </Slider>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

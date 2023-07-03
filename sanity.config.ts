@@ -39,6 +39,18 @@ export default defineConfig({
               .child(
                 S.document().schemaType("yearlyTheme").documentId("yearlyTheme")
               ),
+            S.listItem()
+              .title("Ministries Page Image")
+              .id("ministriesPageImage")
+              .child(
+                S.document()
+                  .schemaType("ministriesPageImage")
+                  .documentId("ministriesPageImage")
+              ),
+            S.listItem()
+              .title("Events Page")
+              .id("event")
+              .child(S.document().schemaType("event").documentId("event")),
 
             // Regular document types
             S.documentTypeListItem("leader").title("Our Leaders"),

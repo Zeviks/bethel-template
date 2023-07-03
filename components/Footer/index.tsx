@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,7 +38,7 @@ const Footer = () => {
                   href="/"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
-                  (956) 787-1737
+                  <p>(956) 787-1737</p>
                 </a>
               </li>
               <li>
