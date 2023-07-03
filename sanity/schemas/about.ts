@@ -9,7 +9,11 @@ interface ImageFieldValue {
 
 interface Fields {
   leftImage: string;
+  address: string;
+  sectionHeading: string;
   rightImage: string;
+  serviceTime1: string;
+  serviceTime2: string;
 }
 
 export default defineType({
@@ -17,6 +21,13 @@ export default defineType({
   title: "About Section",
   type: "document",
   fields: [
+    defineField({
+      name: "sectionHeading",
+      title: "Service",
+      type: "string",
+      validation: (Rule) => Rule.required().min(10).max(80),
+      description: "Enter the section heading here",
+    }),
     defineField({
       name: "leftImage",
       title: "Left image",
@@ -46,6 +57,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: "address",
+      title: "Address",
+      type: "string",
+      validation: (Rule) => Rule.required().min(10).max(80),
+      description: "Enter the address",
+    }),
+
+    defineField({
       name: "rightImage",
       title: "Right image",
       type: "image",
@@ -57,7 +76,7 @@ export default defineType({
 
           const filetype = getExtension(value.asset._ref);
 
-          if (filetype !== "jpg" && filetype !== "png") {
+          if (filetype !== "jpg" && filetype !== "png" && filetype !== "webp") {
             return "Image must be a JPG or PNG";
           }
 
@@ -73,16 +92,39 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: "serviceTime1",
+      title: "Service Time 1",
+      type: "string",
+      validation: (Rule) => Rule.required().min(10).max(80),
+      description: "Enter a service, for example Wednesdays at 7pm",
+    }),
+    defineField({
+      name: "serviceTime2",
+      title: "Service Time 2",
+      type: "string",
+      validation: (Rule) => Rule.required().min(10).max(80),
+      description: "Enter a service, for example Sundays at 10am",
+    }),
   ],
 
   validation: (Rule: Rule) => [
     Rule.custom((fields: Fields) => {
       const missingFields: string[] = [];
       if (!fields.rightImage) {
-        missingFields.push("Ministry's Name");
+        missingFields.push("Left image is missing");
       }
       if (!fields.leftImage) {
-        missingFields.push("Ministry's Description");
+        missingFields.push("Right image is missing");
+      }
+      if (!fields.address) {
+        missingFields.push("Address is missing");
+      }
+      if (!fields.serviceTime1) {
+        missingFields.push("Service 1 is missing");
+      }
+      if (!fields.serviceTime2) {
+        missingFields.push("Service 2 is missing");
       }
 
       if (missingFields.length > 0) {

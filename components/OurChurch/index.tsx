@@ -3,7 +3,6 @@
 import SectionHeading from "../SectionHeading";
 import Image from "next/image";
 import Link from "next/link";
-import SectionTitle from "../Common/SectionTitle";
 import ContactCTA from "../ContactCTA";
 import { urlForImage } from "@/sanity/lib/image";
 import { motion } from "framer-motion";
@@ -29,10 +28,9 @@ const OurChurch = ({ church }) => {
             whileInView="show"
             viewport={{ once: false }}
           >
-            <SectionTitle
-              title="We are a congregation firmly grounded in the love of God, devoted to serving him under any circumstance."
-              paragraph=""
-            />
+            <h2 className="mb-4 text-2xl font-bold leading-tight text-dark sm:text-3xl md:text-4xl">
+              {church.sectionHeading}
+            </h2>
           </motion.div>
           <motion.div
             variants={staggerContainer}
@@ -56,7 +54,7 @@ const OurChurch = ({ church }) => {
                   href="/"
                   className="mt-2 text-[12px] font-semibold text-white lg:text-sm xl:text-[16px]"
                 >
-                  400 S. I Rd, S Veterans Blvd, Pharr, TX 78577
+                  {church.address}
                 </Link>
               </div>
             </motion.div>
@@ -72,13 +70,14 @@ const OurChurch = ({ church }) => {
                 <h2 className="lg:text-md text-center text-sm font-medium text-lightPrimary sm:text-base md:text-lg xl:text-lg">
                   Our Service Times
                 </h2>
-                <p className="text-xs font-light text-lightPrimary sm:text-sm md:text-base lg:text-sm xl:text-lg">
-                  <span className="font-semibold">Wednesdays</span> at{" "}
-                  <span className="font-semibold">7pm</span> <br />
-                  <span className="font-semibold">Sundays</span> at{" "}
-                  <span className="font-semibold">10am</span> &{" "}
-                  <span className="font-semibold">5pm</span>
-                </p>
+                <div>
+                  <p className="text-xs font-light text-lightPrimary sm:text-sm md:text-base lg:text-sm xl:text-lg">
+                    {church.serviceTime1}
+                  </p>
+                  <p className="text-xs font-light text-lightPrimary sm:text-sm md:text-base lg:text-sm xl:text-lg">
+                    {church.serviceTime2}
+                  </p>
+                </div>
               </div>
             </motion.div>
           </motion.div>
