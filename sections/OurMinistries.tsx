@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@material-tailwind/react";
-import MinistryCard from "./MinistryCard";
+import MinistryCard from "../components/MinistryCard";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 

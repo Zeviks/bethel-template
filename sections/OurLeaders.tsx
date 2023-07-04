@@ -1,5 +1,5 @@
 "use client";
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../components/SectionHeading";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
