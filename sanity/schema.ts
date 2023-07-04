@@ -7,6 +7,8 @@ import about from "./schemas/about";
 import yearlyTheme from "./schemas/yearlyTheme";
 import ministriesPageImg from "./schemas/ministriesPageImg";
 import event from "./schemas/event";
+import missions from "./schemas/missions";
+import leadersHeading from "./schemas/leadersHeading";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -17,5 +19,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     yearlyTheme,
     ministriesPageImg,
     event,
+    missions,
+    leadersHeading,
   ],
 };

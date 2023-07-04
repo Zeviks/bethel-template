@@ -1,5 +1,5 @@
 "use client";
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../components/SectionHeading";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 
