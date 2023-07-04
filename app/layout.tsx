@@ -19,7 +19,6 @@ export default function RootLayout({
 
       <body>
         <ThemeProvider>{children}</ThemeProvider>
-        <script src="../path/to/flowbite/dist/flowbite.min.js" async />
       </body>
     </html>
   );
