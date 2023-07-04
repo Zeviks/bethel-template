@@ -1,9 +1,9 @@
 "use client";
 
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../components/SectionHeading";
 import Image from "next/image";
 import Link from "next/link";
-import ContactCTA from "../ContactCTA";
+import ContactCTA from "../components/ContactCTA";
 import { urlForImage } from "@/sanity/lib/image";
 import { motion } from "framer-motion";
 import { textVariant2, fadeIn, staggerContainer } from "@/utils/motion";

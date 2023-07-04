@@ -1,16 +1,17 @@
-import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/CTA";
-import OurChurch from "@/components/OurChurch";
-import Hero from "@/components/Hero";
-import Leaders from "@/components/OurLeaders";
-import Minisitries from "@/components/OurMinistries";
-import YearlyTheme from "@/components/YearlyTheme";
+import {
+  Hero,
+  OurChurch,
+  YearlyTheme,
+  MissionHeading,
+  MissionBody,
+  OurLeaders,
+  OurMinistries,
+  Contact,
+} from "@/sections";
+
+import { Footer, ScrollToTop, NavigationBar, ScrollUp } from "@/components";
+
 import { Inter } from "@next/font/google";
-import MissionHeading from "@/components/OurMission/MissionHeading";
-import MissionBody from "@/components/OurMission/MissionBody";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
-import NavigationBar from "@/components/NavigationBar/index";
 import { client } from "../../sanity/lib/client";
 import { groq } from "next-sanity";
 
@@ -34,7 +35,6 @@ const Home = async () => {
   return (
     <>
       <NavigationBar />
-
       <Hero hero={heroContent} />
       <ScrollUp />
       <OurChurch church={churchContent} />
@@ -43,8 +43,8 @@ const Home = async () => {
       <div className="mt-2 bg-missionBg bg-cover bg-center">
         <MissionBody mission={missionContent} />
       </div>
-      <Minisitries />
-      <Leaders leaders={leadersContent} heading={leadersHeadingContent} />
+      <OurMinistries />
+      <OurLeaders leaders={leadersContent} heading={leadersHeadingContent} />
       <Contact />
       <ScrollToTop />
       <Footer />

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import HeroIcon from "./HeroIcon";
+import HeroIcon from "../components/HeroIcon";
 import { urlForImage } from "@/sanity/lib/image";
 import { motion } from "framer-motion";
 
