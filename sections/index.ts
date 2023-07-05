@@ -1,3 +1,4 @@
+"use client";
 import Hero from "./Hero";
 import OurChurch from "./OurChurch";
 import YearlyTheme from "./YearlyTheme";

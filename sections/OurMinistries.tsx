@@ -1,10 +1,14 @@
 "use client";
 import { Button } from "@material-tailwind/react";
 import MinistryCard from "../components/MinistryCard";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 
-const Ministries = () => {
+interface Motion {
+  staggerContainer: Variants;
+}
+
+const Ministries: React.FC = () => {
   return (
     <section className="yearly-gradient" id="our-ministries">
       <motion.div
@@ -17,14 +21,14 @@ const Ministries = () => {
           Our Ministries
         </h2>
         <p className="mt-4 text-center text-base font-light sm:mt-0 sm:text-left sm:text-xl">
-          God's house always has room for everyone. <br />
+          God&apos;s house always has room for everyone. <br />
           <span className="font-semibold">Discover where you fit in best.</span>
         </p>
       </motion.div>
 
       <div className="container pb-5">
         <motion.div
-          variants={staggerContainer}
+          variants={staggerContainer(0.1, 0.1)} // Adjust staggerChildren and delayChildren as needed
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
