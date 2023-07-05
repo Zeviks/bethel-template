@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 import { client } from "../../../sanity/lib/client";
 import { groq } from "next-sanity";
-
 import { urlForImage } from "@/sanity/lib/image";
 
 const eventQuery = groq`*[_type == 'event'][0]`;

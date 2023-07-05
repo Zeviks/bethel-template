@@ -42,7 +42,7 @@ const Page = async () => {
       <div className="container mx-auto px-4 pt-[1rem] pb-[8rem] md:px-12">
         <div className="h-full py-8">
           <h2 className="font-base text-4xl text-dark">
-            God's house always has room for everyone.{" "}
+            God&apos;s house always has room for everyone.{" "}
             <span className="border-b-2 border-primary font-semibold">
               Discover where you fit in best.
             </span>

@@ -1,13 +1,19 @@
-"use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 
-const MissionBody = (mission) => {
+interface Mission {
+  mission: {
+    missionTitle: string;
+    missionDescription: string;
+  };
+}
+
+const MissionBody: React.FC<Mission> = (mission) => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="flex h-[90vh] w-full flex-col justify-evenly">
         <motion.div
-          variants={staggerContainer}
+          variants={staggerContainer(0.1, 0.1)}
           className="container flex flex-col text-white"
         >
           <motion.h2

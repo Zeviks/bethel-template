@@ -51,7 +51,7 @@ export default function Leaders({ leaders, heading }) {
       <motion.div
         initial="hidden"
         whileInView="show"
-        variants={staggerContainer}
+        variants={staggerContainer(0.1, 0.1)}
         className="container my-20 flex flex-col items-center justify-between"
       >
         <motion.h2

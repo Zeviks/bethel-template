@@ -9,7 +9,7 @@ const MissionHeading = () => {
       <SectionHeading heading="Our Mission" />
       <div className="container mx-auto mt-8 sm:mt-10 md:mt-12">
         <motion.div
-          variants={staggerContainer}
+          variants={staggerContainer(0.1, 0.1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
