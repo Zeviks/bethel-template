@@ -23,9 +23,9 @@ export default defineType({
   fields: [
     defineField({
       name: "sectionHeading",
-      title: "Service",
+      title: "Section Heading",
       type: "string",
-      validation: (Rule) => Rule.required().min(10).max(80),
+      validation: (Rule) => Rule.required().min(10).max(200),
       description: "Enter the section heading here",
     }),
     defineField({
