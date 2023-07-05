@@ -44,7 +44,7 @@ export default defineConfig({
               .id("mission")
               .child(S.document().schemaType("mission").documentId("mission")),
             S.listItem()
-              .title("Leaders Section")
+              .title("Leaders Heading")
               .id("leadersHeading")
               .child(
                 S.document()
