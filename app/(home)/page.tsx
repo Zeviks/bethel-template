@@ -37,14 +37,16 @@ const Home = async () => {
       <NavigationBar />
       <Hero hero={heroContent} />
       <ScrollUp />
+
       <OurChurch church={churchContent} />
+
       <YearlyTheme yearly={yearlyContent} />
       <MissionHeading />
       <div className="mt-2 bg-missionBg bg-cover bg-center">
         <MissionBody mission={missionContent} />
       </div>
       <OurMinistries />
-      <OurLeaders leaders={leadersContent} heading={leadersHeadingContent} />
+      {/* <OurLeaders leaders={leadersContent} heading={leadersHeadingContent} /> */}
       <Contact />
       <ScrollToTop />
       <Footer />
