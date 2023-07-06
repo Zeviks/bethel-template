@@ -61,8 +61,8 @@ export default function Leaders({ leaders, heading }) {
           {heading.leadersTitle}
         </motion.h2>
         <motion.p
-          variants={fadeIn("left", "tween", 0.2, 0.3)}
-          className="w-full pt-3 text-center text-xl font-light leading-tight md:w-[50ch]"
+          variants={fadeIn("bottom", "tween", 0.2, 0.3)}
+          className="md:w-[50ch] w-full pt-3 text-center text-xl font-light leading-tight"
         >
           {heading.leadersDescription}
         </motion.p>
@@ -78,7 +78,7 @@ export default function Leaders({ leaders, heading }) {
             {leaders.map((leader) => (
               <div
                 key={leader._id}
-                className="h-[400px] w-[200px] px-2 sm:w-[250px] md:w-[300px]"
+                className="sm:w-[250px] md:w-[300px] h-[400px] w-[200px] px-2"
               >
                 <img
                   src={urlForImage(leader.mainImage).url()}
