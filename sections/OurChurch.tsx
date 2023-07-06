@@ -40,8 +40,8 @@ const OurChurch = ({ church }) => {
             className="flex flex-col gap-5 pt-10 lg:flex-row"
           >
             <motion.div
-              variants={fadeIn("right", "tween", 0.2, 1)}
-              className="flex h-[500px] items-end justify-center rounded bg-cover bg-center px-6 lg:w-[75%] lg:px-8 xl:w-[70%] xl:px-12"
+              variants={fadeIn("up", "tween", 0.2, 1)}
+              className="lg:w-[75%] xl:w-[70%] flex h-[500px] items-end justify-center rounded bg-cover bg-center px-6 lg:px-8 xl:px-12"
               style={{
                 backgroundImage: `url(${leftImg})`,
               }}
@@ -52,7 +52,7 @@ const OurChurch = ({ church }) => {
                 </h2>
                 <Link
                   href="/"
-                  className="mt-2 text-[12px] font-semibold text-white lg:text-sm xl:text-[16px]"
+                  className="xl:text-[16px] mt-2 text-[12px] font-semibold text-white lg:text-sm"
                 >
                   {church.address}
                 </Link>
@@ -60,13 +60,13 @@ const OurChurch = ({ church }) => {
             </motion.div>
 
             <motion.div
-              variants={fadeIn("left", "tween", 0.3, 1)}
+              variants={fadeIn("up", "tween", 0.3, 1.25)}
               className="flex h-[500px] w-full items-end justify-center rounded bg-cover bg-center px-6 md:px-12"
               style={{
                 backgroundImage: `url(${rightImg})`,
               }}
             >
-              <div className="container mb-12 flex h-16 items-center justify-evenly rounded bg-dark py-5 sm:h-20 md:h-24 lg:h-[80px]">
+              <div className="lg:h-[80px] container mb-12 flex h-16 items-center justify-evenly rounded bg-dark py-5 sm:h-20 md:h-24">
                 <h2 className="lg:text-md text-center text-sm font-medium text-lightPrimary sm:text-base md:text-lg xl:text-lg">
                   Our Service Times
                 </h2>

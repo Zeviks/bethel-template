@@ -29,7 +29,7 @@ const Page = async () => {
         />
 
         <motion.h1
-          variants={fadeIn("right", "tween", 0.2, 1)}
+          variants={fadeIn("bottom", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
@@ -39,7 +39,7 @@ const Page = async () => {
         </motion.h1>
       </div>
 
-      <div className="container mx-auto px-4 pt-[1rem] pb-[8rem] md:px-12">
+      <div className="container mx-auto px-4 pb-[8rem] pt-[1rem] md:px-12">
         <div className="h-full py-8">
           <h2 className="font-base text-4xl text-dark">
             God&apos;s house always has room for everyone.{" "}
@@ -60,7 +60,7 @@ const Page = async () => {
           {ministries.map((ministry, index) => (
             <motion.article
               key={ministry._id}
-              variants={fadeIn("left", "tween", 0.2, (index + 1) * 0.1)}
+              variants={fadeIn("up", "tween", 0.2, (index + 1) * 0.1)}
               initial="hidden"
               whileInView="show"
               className="overflow-hidden shadow-lg"

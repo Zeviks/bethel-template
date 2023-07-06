@@ -10,7 +10,7 @@ const Hero = ({ hero }) => {
   return (
     <section
       id="home"
-      className="relative z-10 h-screen w-full overflow-hidden py-0 pt-[100px] md:h-[100%] md:pt-[150px] md:pb-[120px] xl:h-screen xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+      className="md:h-[100%] md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px] relative z-10 h-screen w-full max-w-full overflow-hidden py-0 pt-[100px] xl:h-screen"
     >
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center"
@@ -24,14 +24,14 @@ const Hero = ({ hero }) => {
         <div className="-mx-4 mt-8 flex flex-wrap">
           <div className="w-full px-4">
             <div
-              className="wow fadeInUp mx-auto max-w-[800px] text-center xl:max-w-[900px]"
+              className="wow fadeInUp xl:max-w-[900px] mx-auto max-w-[800px] text-center"
               data-wow-delay=".2s"
             >
               <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="mb-10 font-['Bellefair'] text-5xl uppercase leading-tight text-white sm:text-7xl sm:leading-tight md:mt-2 md:text-8xl md:leading-tight lg:text-[110px] xl:text-9xl"
+                className="lg:text-[110px] mb-10 font-['Bellefair'] text-5xl uppercase leading-tight text-white sm:text-7xl sm:leading-tight md:mt-2 md:text-8xl md:leading-tight xl:text-9xl"
               >
                 {hero.mainHeading}
                 <span className="rounded-md bg-primary text-dark">
@@ -50,11 +50,11 @@ const Hero = ({ hero }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
-                className="px-auto flex items-end justify-center gap-4 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
+                className="px-auto flex items-end justify-center gap-4 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
               >
                 <Link
                   href="/"
-                  className="rounded bg-primary py-2 px-3 text-sm font-medium text-dark duration-300 ease-in-out hover:bg-primary/80 sm:text-base"
+                  className="hover:bg-primary/80 rounded bg-primary px-3 py-2 text-sm font-medium text-dark duration-300 ease-in-out sm:text-base"
                 >
                   Join in Person
                 </Link>
