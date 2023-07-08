@@ -33,7 +33,7 @@ const Footer = () => {
                   rel="noreferrer"
                   className="text-medium text-medium mb-3 inline-block font-medium text-dark hover:text-primary"
                 >
-                  400 S Veterans Blvd, Pharr, TX 78577
+                  400 S. Veterans Blvd, Pharr, TX 78577
                 </a>
               </li>
               <li>
