@@ -136,8 +136,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-primary/10 py-6">
-        <div className="container">
-          <p className="text-center text-sm text-body-color dark:text-white">
+        <div className="container flex flex-col items-center justify-evenly sm:flex-row">
+          <p className="text-sm text-body-color dark:text-white">
+            © 2023 Bethel Pharr. All rights reserved.
+          </p>
+          <p className="text-sm text-body-color dark:text-white">
             Proudly designed &amp; built by{" "}
             <a
               href="https://natanaelpacheco.framer.website/"
