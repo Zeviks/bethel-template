@@ -110,7 +110,7 @@ const NavigationBar = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`transition-all flex py-2 text-base font-light text-lightPrimary group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 `}
+                            className={` flex py-2 text-base font-light text-lightPrimary group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 `}
                           >
                             {menuItem.title}
                           </Link>
@@ -139,7 +139,7 @@ const NavigationBar = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={submenuItem.id}
-                                  className="transition-all block rounded py-2.5 text-sm text-dark hover:opacity-70 lg:px-3"
+                                  className=" block rounded py-2.5 text-sm text-dark hover:opacity-70 lg:px-3"
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -152,7 +152,7 @@ const NavigationBar = () => {
                     <li className="group relative md:hidden">
                       <div className="">
                         <Link
-                          className="transition-all my-4 flex justify-center rounded-md border border-lightPrimary py-4 text-base font-bold text-primary transition-all active:bg-lightPrimary active:text-dark group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+                          className="my-4 flex justify-center rounded-md border border-lightPrimary py-4 text-base font-bold text-primary transition-all active:bg-lightPrimary active:text-dark group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
                           target="_blank"
                           rel="noreferrer"
                           href="https://pushpay.com/g/bethelpharr"
