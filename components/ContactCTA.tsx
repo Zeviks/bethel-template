@@ -4,6 +4,8 @@ import { Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 
+import Link from "next";
+
 const ContactCTA = () => {
   return (
     <motion.div
@@ -15,7 +17,7 @@ const ContactCTA = () => {
       <p className="w-fit font-light md:mr-4">
         Feel free to reach out to us during office hours.
       </p>
-      <a href="/ministries">
+      <a href={"/ministries"}>
         <Button variant="outlined" className="text-dark">
           Contact Us
         </Button>
