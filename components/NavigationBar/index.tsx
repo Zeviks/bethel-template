@@ -153,6 +153,8 @@ const NavigationBar = () => {
                       <div className="">
                         <Link
                           className="my-4 flex justify-center rounded-md border border-lightPrimary py-4 text-base font-bold text-primary transition-all active:bg-lightPrimary active:text-dark group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+                          target="_blank"
+                          rel="noreferrer"
                           href="https://pushpay.com/g/bethelpharr"
                         >
                           Give

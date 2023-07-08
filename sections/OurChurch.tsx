@@ -51,7 +51,8 @@ const OurChurch = ({ church }) => {
                   We are located at:
                 </h2>
                 <Link
-                  href="/"
+                  href="https://www.google.com/maps/place/Bethel+Pharr.church/@26.1876599,-98.171044,17z/data=!4m15!1m8!3m7!1s0x8665a078a385996f:0x4a1df8408ffca182!2s400+S+Veterans+Blvd,+Pharr,+TX+78577!3b1!8m2!3d26.1876599!4d-98.171044!16s%2Fg%2F11hc2xk25v!3m5!1s0x8665a0785d494089:0xccdc46439ec7a970!8m2!3d26.1889005!4d-98.1685385!16s%2Fg%2F1tfr0w4t?entry=ttu"
+                  target="_blank"
                   className="xl:text-[16px] mt-2 text-[12px] font-semibold text-white lg:text-sm"
                 >
                   {church.address}

@@ -21,53 +21,46 @@ const Footer = () => {
           </div>
 
           <div className="mb-6">
+            {/* Contact Us */}
             <h2 className="mb-5 text-lg font-bold text-black dark:text-white">
-              Address
+              Contact Us
             </h2>
             <ul>
               <li>
                 <a
-                  href="/"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  href="https://www.google.com/maps/place/Bethel+Pharr.church/@26.1876599,-98.171044,17z/data=!4m15!1m8!3m7!1s0x8665a078a385996f:0x4a1df8408ffca182!2s400+S+Veterans+Blvd,+Pharr,+TX+78577!3b1!8m2!3d26.1876599!4d-98.171044!16s%2Fg%2F11hc2xk25v!3m5!1s0x8665a0785d494089:0xccdc46439ec7a970!8m2!3d26.1889005!4d-98.1685385!16s%2Fg%2F1tfr0w4t?entry=ttu"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-medium text-medium mb-3 inline-block font-medium text-dark hover:text-primary"
                 >
                   400 S Veterans Blvd, Pharr, TX 78577
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
-                >
-                  <p>(956) 787-1737</p>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  href="mailto:bethelpharr.church@gmail.com"
+                  className="text-medium mb-3 inline-block font-medium text-dark hover:text-primary"
                 >
                   bethelpharr.church@gmail.com
                 </a>
+              </li>
+              <li>
+                <p className="text-medium mb-3 inline-block font-medium text-dark ">
+                  (956) 787-1737
+                </p>
               </li>
             </ul>
           </div>
 
           <div className="mb-6">
+            {/* Useful Links */}
             <h2 className="mb-5 text-lg font-bold text-black dark:text-white">
               Useful Links
             </h2>
             <ul>
               <li>
                 <a
-                  href="/"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
-                >
-                  Who We Are
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
+                  href="/ministries"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
                   Ministries
@@ -75,7 +68,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/events"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
                   Events
@@ -83,15 +76,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
+                  href="https://pushpay.com/g/bethelpharr"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
                   Give
@@ -101,13 +86,16 @@ const Footer = () => {
           </div>
 
           <div className="mb-6">
+            {/* Social Media */}
             <h2 className="mb-5 text-lg font-bold text-black dark:text-white">
               Social Media
             </h2>
             <ul>
               <li>
                 <a
-                  href="/"
+                  href="https://www.facebook.com/bethelpharr/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
                   Facebook
@@ -115,7 +103,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://twitter.com/BethelPharr400"
+                  target="_blank"
+                  rel="noreferrer"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
                   Twitter
@@ -123,7 +113,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://www.youtube.com/user/BethelPharr400"
+                  target="_blank"
+                  rel="noreferrer"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
                   YouTube
@@ -131,7 +123,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://www.instagram.com/bethelpharr400/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
                 >
                   Instagram
