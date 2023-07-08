@@ -1,5 +1,6 @@
 import { defineField, defineType, Rule } from "sanity";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
+import { BsPersonCircle } from "react-icons/bs";
 
 interface ImageFieldValue {
   asset: {
@@ -16,6 +17,7 @@ export default defineType({
   name: "leader",
   title: "Our Leaders",
   type: "document",
+  icon: BsPersonCircle,
   fields: [
     defineField({
       name: "mainImage",

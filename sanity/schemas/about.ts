@@ -1,5 +1,6 @@
 import { defineField, defineType, Rule } from "sanity";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
+import { BiChurch } from "react-icons/bi";
 
 interface ImageFieldValue {
   asset: {
@@ -20,6 +21,7 @@ export default defineType({
   name: "about",
   title: "About Section",
   type: "document",
+  icon: BiChurch,
   fields: [
     defineField({
       name: "sectionHeading",
