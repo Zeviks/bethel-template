@@ -31,7 +31,7 @@ const Footer = () => {
                   href="https://www.google.com/maps/place/Bethel+Pharr.church/@26.1876599,-98.171044,17z/data=!4m15!1m8!3m7!1s0x8665a078a385996f:0x4a1df8408ffca182!2s400+S+Veterans+Blvd,+Pharr,+TX+78577!3b1!8m2!3d26.1876599!4d-98.171044!16s%2Fg%2F11hc2xk25v!3m5!1s0x8665a0785d494089:0xccdc46439ec7a970!8m2!3d26.1889005!4d-98.1685385!16s%2Fg%2F1tfr0w4t?entry=ttu"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-medium text-medium mb-3 inline-block font-medium text-dark hover:text-primary"
+                  className="text-medium text-medium mb-3 inline-block font-medium text-dark transition-all hover:text-primary"
                 >
                   400 S. Veterans Blvd, Pharr, TX 78577
                 </a>
@@ -39,13 +39,13 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:bethelpharr.church@gmail.com"
-                  className="text-medium mb-3 inline-block font-medium text-dark hover:text-primary"
+                  className="text-medium mb-3 inline-block font-medium text-dark transition-all hover:text-primary"
                 >
                   bethelpharr.church@gmail.com
                 </a>
               </li>
               <li>
-                <p className="text-medium mb-3 inline-block font-medium text-dark ">
+                <p className="text-medium mb-3 inline-block font-medium text-dark transition-all ">
                   (956) 787-1737
                 </p>
               </li>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/ministries"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  className="mb-3 inline-block text-sm font-medium text-body-color transition-all hover:text-primary"
                 >
                   Ministries
                 </a>
@@ -69,7 +69,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/events"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  className="mb-3 inline-block text-sm font-medium text-body-color transition-all hover:text-primary"
                 >
                   Events
                 </a>
@@ -77,7 +77,7 @@ const Footer = () => {
               <li>
                 <a
                   href="https://pushpay.com/g/bethelpharr"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  className="mb-3 inline-block text-sm font-medium text-body-color transition-all hover:text-primary"
                 >
                   Give
                 </a>
@@ -87,7 +87,7 @@ const Footer = () => {
 
           <div className="mb-6">
             {/* Social Media */}
-            <h2 className="mb-5 text-lg font-bold text-black dark:text-white">
+            <h2 className="mb-5 text-lg font-bold text-black transition-all dark:text-white">
               Social Media
             </h2>
             <ul>
@@ -96,7 +96,7 @@ const Footer = () => {
                   href="https://www.facebook.com/bethelpharr/"
                   target="_blank"
                   rel="noreferrer"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  className="mb-3 inline-block text-sm font-medium text-body-color transition-all hover:text-primary"
                 >
                   Facebook
                 </a>
@@ -106,7 +106,7 @@ const Footer = () => {
                   href="https://twitter.com/BethelPharr400"
                   target="_blank"
                   rel="noreferrer"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  className="mb-3 inline-block text-sm font-medium text-body-color transition-all hover:text-primary"
                 >
                   Twitter
                 </a>
@@ -116,7 +116,7 @@ const Footer = () => {
                   href="https://www.youtube.com/user/BethelPharr400"
                   target="_blank"
                   rel="noreferrer"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  className="mb-3 inline-block text-sm font-medium text-body-color transition-all hover:text-primary"
                 >
                   YouTube
                 </a>
@@ -126,7 +126,7 @@ const Footer = () => {
                   href="https://www.instagram.com/bethelpharr400/"
                   target="_blank"
                   rel="noreferrer"
-                  className="mb-3 inline-block text-sm font-medium text-body-color hover:text-primary"
+                  className="mb-3 inline-block text-sm font-medium text-body-color transition-all hover:text-primary"
                 >
                   Instagram
                 </a>
@@ -142,7 +142,7 @@ const Footer = () => {
             <a
               href="https://natanaelpacheco.framer.website/"
               rel="nofollow noopener"
-              className="text-primary hover:text-body-color"
+              className="text-primary transition-all hover:font-semibold hover:text-dark"
             >
               Natanael Pacheco ⚡️
             </a>

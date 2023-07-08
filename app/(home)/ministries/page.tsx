@@ -29,7 +29,7 @@ const Page = async () => {
         />
 
         <motion.h1
-          variants={fadeIn("bottom", "tween", 0.2, 1)}
+          variants={fadeIn("up", "tween", 0.5, 0.2)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}

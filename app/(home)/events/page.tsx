@@ -26,7 +26,7 @@ const Page = async () => {
           className="brightness-70 block"
         />
         <motion.h1
-          variants={fadeIn("right", "tween", 0.2, 1)}
+          variants={fadeIn("up", "tween", 0.5, 0.2)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
@@ -39,7 +39,7 @@ const Page = async () => {
       <div className="container my-10 flex h-[80vh] w-full items-center justify-center overflow-hidden border shadow-lg">
         <div className="relative h-full w-full">
           <Image
-            alt="Ministries Header"
+            alt="Calendar Image"
             src={urlForImage(event.eventCalendarImage).url()}
             layout="fill"
             objectFit="cover"
