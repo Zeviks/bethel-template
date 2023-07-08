@@ -3,6 +3,7 @@ import { Button } from "@material-tailwind/react";
 import MinistryCard from "../components/MinistryCard";
 import { motion, Variants } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
+import { ContactCTA } from "@/components";
 
 interface Motion {
   staggerContainer: Variants;
@@ -17,7 +18,7 @@ const Ministries: React.FC = () => {
         variants={fadeIn("up", "tween", 0.2, 0.5)}
         className="container flex w-full flex-col items-center justify-between py-10 sm:flex-row"
       >
-        <h2 className="w-full text-center text-3xl font-semibold text-dark sm:w-[30ch] sm:text-left sm:text-4xl">
+        <h2 className="sm:w-[30ch] w-full text-center text-3xl font-semibold text-dark sm:text-left sm:text-4xl">
           Our Ministries
         </h2>
         <p className="mt-4 text-center text-base font-light sm:mt-0 sm:text-left sm:text-xl">
@@ -99,9 +100,11 @@ const Ministries: React.FC = () => {
         </motion.div>
 
         <motion.div className="my-10 flex flex-col items-center sm:flex-row sm:justify-between">
-          <a href="/ministries" className="mt-4 sm:mt-0">
-            <Button variant="outlined">View All</Button>
-          </a>
+          <ContactCTA
+            href={"/ministries"}
+            buttonName={"View All"}
+            buttonDesc={""}
+          />
         </motion.div>
       </div>
     </section>

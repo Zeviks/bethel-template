@@ -81,7 +81,11 @@ const OurChurch = ({ church }) => {
               </div>
             </motion.div>
           </motion.div>
-          <ContactCTA />
+          <ContactCTA
+            href={"#contact"}
+            buttonName={"Contact Us"}
+            buttonDesc={"Feel free to reach out to us during office hours."}
+          />
         </div>
       </section>
     </>
