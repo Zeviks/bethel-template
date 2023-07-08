@@ -9,7 +9,7 @@ import Link from "next/link";
 const ContactCTA = ({ href, buttonName, buttonDesc }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "tween", 1, 0.2)}
+      variants={fadeIn("up", "tween", 0.7, 0.2)}
       initial="hidden"
       whileInView="show"
       className="my-10 flex flex-col items-center md:flex-row md:justify-end"

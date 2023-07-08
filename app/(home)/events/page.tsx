@@ -8,6 +8,8 @@ import { client } from "../../../sanity/lib/client";
 import { groq } from "next-sanity";
 import { urlForImage } from "@/sanity/lib/image";
 
+import ModalImage from "react-modal-image";
+
 const eventQuery = groq`*[_type == 'event'][0]`;
 
 const Page = async () => {
@@ -36,14 +38,17 @@ const Page = async () => {
         </motion.h1>
       </div>
 
-      <div className="container my-10 flex h-[80vh] w-full items-center justify-center overflow-hidden border shadow-lg">
-        <div className="relative h-full w-full">
-          <Image
+      {/* Calendar */}
+      <div className="h-40vh container my-10 flex h-fit w-fit overflow-hidden border p-4 shadow-lg">
+        <div className="relative flex  items-center justify-center">
+          <ModalImage
+            small={"/images/calendar/1212.png"}
+            medium={"/images/calendar/1212.png"}
+            large={urlForImage(event.eventCalendarImage).url()}
             alt="Calendar Image"
-            src={urlForImage(event.eventCalendarImage).url()}
             layout="fill"
             objectFit="cover"
-            className="brightness-70 block"
+            className="brightness-70 z-9999 block bg-cover bg-center"
           />
         </div>
       </div>

@@ -40,17 +40,20 @@ const Page = async () => {
       </div>
 
       <div className="container mx-auto px-4 pb-[8rem] pt-[1rem] md:px-12">
-        <div className="h-full py-8">
+        <motion.div
+          initial="hidden"
+          variants={fadeIn("up", "tween", 0.5, 0.2)}
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="h-full py-10"
+        >
           <h2 className="font-base text-4xl text-dark">
             God&apos;s house always has room for everyone.{" "}
             <span className="border-b-2 border-primary font-semibold">
               Discover where you fit in best.
             </span>
           </h2>
-          <p className="text-lg font-thin">
-            Browse through our minstries below
-          </p>
-        </div>
+        </motion.div>
         <motion.div
           initial="hidden"
           whileInView="show"
