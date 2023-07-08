@@ -60,8 +60,9 @@ export default defineConfig({
                   .schemaType("leadersHeading")
                   .documentId("leadersHeading")
               ),
+
             S.listItem()
-              .title("Ministries Page Image")
+              .title("Ministries Page")
               .id("ministriesPageImage")
               .icon(BsImage)
               .child(
