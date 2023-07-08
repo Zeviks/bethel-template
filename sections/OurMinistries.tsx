@@ -100,11 +100,13 @@ const Ministries: React.FC = () => {
         </motion.div>
 
         <motion.div className="my-10 flex flex-col items-center sm:flex-row sm:justify-between">
-          <ContactCTA
-            href={"/ministries"}
-            buttonName={"View All"}
-            buttonDesc={""}
-          />
+          <div className="flex flex-col items-center sm:items-start">
+            <ContactCTA
+              href={"/ministries"}
+              buttonName={"View All"}
+              buttonDesc={""}
+            />
+          </div>
         </motion.div>
       </div>
     </section>
