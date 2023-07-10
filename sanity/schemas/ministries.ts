@@ -1,5 +1,6 @@
 import { defineField, defineType, Rule } from "sanity";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
+import { RiCrossFill } from "react-icons/ri";
 
 interface ImageFieldValue {
   asset: {
@@ -17,6 +18,7 @@ export default defineType({
   name: "ministries",
   title: "Our Ministries",
   type: "document",
+  icon: RiCrossFill,
   fields: [
     defineField({
       name: "name",

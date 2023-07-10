@@ -1,6 +1,5 @@
 "use client";
 
-import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 

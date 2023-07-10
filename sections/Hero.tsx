@@ -53,13 +53,15 @@ const Hero = ({ hero }) => {
                 className="px-auto flex items-end justify-center gap-4 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
               >
                 <Link
-                  href="/"
+                  href="https://www.google.com/maps/place/Bethel+Pharr.church/@26.1876599,-98.171044,17z/data=!4m15!1m8!3m7!1s0x8665a078a385996f:0x4a1df8408ffca182!2s400+S+Veterans+Blvd,+Pharr,+TX+78577!3b1!8m2!3d26.1876599!4d-98.171044!16s%2Fg%2F11hc2xk25v!3m5!1s0x8665a0785d494089:0xccdc46439ec7a970!8m2!3d26.1889005!4d-98.1685385!16s%2Fg%2F1tfr0w4t?entry=ttu"
+                  target="_blank"
                   className="hover:bg-primary/80 rounded bg-primary px-3 py-2 text-sm font-medium text-dark duration-300 ease-in-out sm:text-base"
                 >
                   Join in Person
                 </Link>
                 <Link
-                  href="/"
+                  href="https://www.facebook.com/bethelpharr/"
+                  target="_blank"
                   className="anim-underline-fx py-2 text-base font-medium text-lightPrimary duration-300 ease-in-out sm:text-sm"
                 >
                   <span className="flex font-medium">

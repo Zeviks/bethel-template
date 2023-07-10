@@ -1,16 +1,16 @@
 import { motion, Variants } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
+import { urlForImage } from "@/sanity/lib/image";
 
-interface Mission {
-  mission: {
-    missionTitle: string;
-    missionDescription: string;
-  };
-}
-
-const MissionBody: React.FC<Mission> = (mission) => {
+const MissionBody = (mission) => {
+  const missionBg = urlForImage(mission.mission.mainImage).url();
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section
+      className="bg-cover bg-center py-16 md:py-20 lg:py-28"
+      style={{
+        backgroundImage: `url(${missionBg})`,
+      }}
+    >
       <div className="flex h-[90vh] w-full flex-col justify-evenly">
         <motion.div
           variants={staggerContainer(0.1, 0.1)}

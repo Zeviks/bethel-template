@@ -40,12 +40,10 @@ const Home = async () => {
       <OurChurch church={churchContent} />
       <YearlyTheme yearly={yearlyContent} />
       <MissionHeading />
-      <div className="mt-2 bg-missionBg bg-cover bg-center">
-        <MissionBody mission={missionContent} />
-      </div>
+      <MissionBody mission={missionContent} />
       <OurMinistries />
       <OurLeaders leaders={leadersContent} heading={leadersHeadingContent} />
-      <Contact />
+      <Contact services={churchContent} />
       <ScrollToTop />
       <Footer />
     </>

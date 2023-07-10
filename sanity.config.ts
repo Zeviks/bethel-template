@@ -4,6 +4,11 @@ import { visionTool } from "@sanity/vision";
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schema as schemaTypes } from "./sanity/schema";
 
+import { BiChurch } from "react-icons/bi";
+import { AiFillHome, AiFillEdit } from "react-icons/ai";
+import { BsGlobeAmericas, BsImage } from "react-icons/bs";
+import { MdTitle } from "react-icons/md";
+
 // Define the actions that should be available for singleton documents
 const singletonActions = new Set(["publish", "discardChanges", "restore"]);
 
@@ -21,39 +26,45 @@ export default defineConfig({
         S.list()
           .title("Content Configuration")
           .items([
-            // Our singleton type has a list item with a custom child
-            // Instead of rendering a list of documents, we render a single
-            // document, specifying the `documentId` manually to ensure
-            // that we're editing the single instance of the document
             S.listItem()
               .title("Hero")
               .id("hero")
+              .icon(AiFillHome)
               .child(S.document().schemaType("hero").documentId("hero")),
             S.listItem()
               .title("Our Church Section")
+              .icon(BiChurch)
               .id("about")
               .child(S.document().schemaType("about").documentId("about")),
             S.listItem()
               .title("Yearly Theme")
               .id("yearlyTheme")
+              .icon(AiFillEdit)
               .child(
                 S.document().schemaType("yearlyTheme").documentId("yearlyTheme")
               ),
             S.listItem()
               .title("Mission Section")
               .id("mission")
+              .icon(BsGlobeAmericas)
               .child(S.document().schemaType("mission").documentId("mission")),
+            // Regular document types
+            S.documentTypeListItem("leader").title("Our Leaders"),
+            S.documentTypeListItem("ministries").title("Our Ministries"),
             S.listItem()
               .title("Leaders Heading")
               .id("leadersHeading")
+              .icon(MdTitle)
               .child(
                 S.document()
                   .schemaType("leadersHeading")
                   .documentId("leadersHeading")
               ),
+
             S.listItem()
-              .title("Ministries Page Image")
+              .title("Ministries Page")
               .id("ministriesPageImage")
+              .icon(BsImage)
               .child(
                 S.document()
                   .schemaType("ministriesPageImage")
@@ -62,11 +73,8 @@ export default defineConfig({
             S.listItem()
               .title("Events Page")
               .id("event")
+              .icon(BsImage)
               .child(S.document().schemaType("event").documentId("event")),
-
-            // Regular document types
-            S.documentTypeListItem("leader").title("Our Leaders"),
-            S.documentTypeListItem("ministries").title("Our Ministries"),
           ]),
     }),
     visionTool(),

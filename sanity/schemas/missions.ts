@@ -8,47 +8,47 @@ interface ImageFieldValue {
 }
 
 interface Fields {
-  //mainImage: ImageFieldValue;
+  mainImage: ImageFieldValue;
   missionTitle: string;
   missionDescription: string;
 }
 
 export default defineType({
   name: "mission",
-  title: "Mission Section",
+  title: "Missions Section",
   type: "document",
   fields: [
-    // defineField({
-    //   name: "mainImage",
-    //   title: "Background image",
-    //   type: "image",
-    //   validation: (rule: Rule) =>
-    //     rule.custom((value: ImageFieldValue) => {
-    //       if (!value) {
-    //         return "Image field cannot be left empty";
-    //       }
+    defineField({
+      name: "mainImage",
+      title: "Background image",
+      type: "image",
+      validation: (rule: Rule) =>
+        rule.custom((value: ImageFieldValue) => {
+          if (!value) {
+            return "Image field cannot be left empty";
+          }
 
-    //       const filetype = getExtension(value.asset._ref);
+          const filetype = getExtension(value.asset._ref);
 
-    //       if (filetype !== "jpg" && filetype !== "png" && filetype !== "webp") {
-    //         return "Image must be a JPG or PNG or webp";
-    //       }
+          if (filetype !== "jpg" && filetype !== "png" && filetype !== "webp") {
+            return "Image must be a JPG or PNG or webp";
+          }
 
-    //       const { width, height } = getImageDimensions(value.asset._ref);
+          const { width, height } = getImageDimensions(value.asset._ref);
 
-    //       if (width < 1200 || height < 630) {
-    //         return "Image must be at least 1200x630 pixels";
-    //       }
+          if (width < 1200 || height < 630) {
+            return "Image must be at least 1200x630 pixels";
+          }
 
-    //       return true;
-    //     }),
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
+          return true;
+        }),
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField({
       name: "missionTitle",
-      title: "Mission Title",
+      title: "Missions Title",
       type: "string",
       validation: (Rule) => Rule.required().min(2).max(50),
       description: "Enter the main heading",
@@ -56,7 +56,7 @@ export default defineType({
 
     defineField({
       name: "missionDescription",
-      title: "Mission Description",
+      title: "Missions Description",
       type: "string",
       validation: (Rule) => Rule.required().min(10).max(500),
       description: "Enter the sub heading",
@@ -65,14 +65,14 @@ export default defineType({
   validation: (Rule: Rule) => [
     Rule.custom((fields: Fields) => {
       const missingFields: string[] = [];
-      // if (!fields.mainImage) {
-      //   missingFields.push("Main image");
-      // }
+      if (!fields.mainImage) {
+        missingFields.push("Background image");
+      }
       if (!fields.missionTitle) {
-        missingFields.push("Mission title");
+        missingFields.push("Missions title");
       }
       if (!fields.missionDescription) {
-        missingFields.push("Mission description");
+        missingFields.push("Missions description");
       }
       if (missingFields.length > 0) {
         return `The following fields must be filled: ${missingFields.join(
