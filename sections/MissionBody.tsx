@@ -2,14 +2,7 @@ import { motion, Variants } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { urlForImage } from "@/sanity/lib/image";
 
-interface Mission {
-  mission: {
-    missionTitle: string;
-    missionDescription: string;
-  };
-}
-
-const MissionBody: React.FC<Mission> = (mission) => {
+const MissionBody = (mission) => {
   const missionBg = urlForImage(mission.mission.mainImage).url();
   return (
     <section
