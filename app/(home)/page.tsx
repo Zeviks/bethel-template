@@ -43,7 +43,7 @@ const Home = async () => {
       <MissionBody mission={missionContent} />
       <OurMinistries />
       <OurLeaders leaders={leadersContent} heading={leadersHeadingContent} />
-      <Contact />
+      <Contact services={churchContent} />
       <ScrollToTop />
       <Footer />
     </>
