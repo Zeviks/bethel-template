@@ -44,7 +44,7 @@ export default defineConfig({
                 S.document().schemaType("yearlyTheme").documentId("yearlyTheme")
               ),
             S.listItem()
-              .title("Mission Section")
+              .title("Our Vision")
               .id("mission")
               .icon(BsGlobeAmericas)
               .child(S.document().schemaType("mission").documentId("mission")),
